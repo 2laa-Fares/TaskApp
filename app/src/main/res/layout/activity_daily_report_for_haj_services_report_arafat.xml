@@ -1,0 +1,718 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_margin="5dp"
+    tools:context=".view.DailyReportForHajServicesFollowingArafatActivity"
+    android:focusable="true"
+    android:focusableInTouchMode="true">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+            xmlns:app="http://schemas.android.com/apk/res-auto"
+            xmlns:tools="http://schemas.android.com/tools"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <EditText
+                android:id="@+id/dayNoEditText"
+                style="@style/edit_text"
+                android:layout_marginTop="8dp"
+                android:ems="3"
+                android:gravity="center"
+                android:hint="يوم "
+                android:inputType="number"
+                app:layout_constraintRight_toLeftOf="@+id/textView37"
+                app:layout_constraintTop_toBottomOf="@+id/dayEditText" />
+
+            <TextView
+                android:id="@+id/textView23"
+                style="@style/title_text"
+                android:text="اليوم: "
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textView40" />
+
+            <EditText
+                android:id="@+id/dayEditText"
+                style="@style/edit_text"
+                android:ems="5"
+                android:gravity="right"
+                android:inputType="textPersonName"
+                app:layout_constraintRight_toLeftOf="@+id/textView23"
+                app:layout_constraintTop_toBottomOf="@+id/textView40" />
+
+            <TextView
+                android:id="@+id/textView24"
+                style="@style/title_text"
+                android:text="الزيارة رقم:  "
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/dayNoEditText" />
+
+            <EditText
+                android:id="@+id/visitNoEditText"
+                style="@style/edit_text"
+                android:layout_marginTop="8dp"
+                android:ems="3"
+                android:inputType="number"
+                android:gravity="center"
+                app:layout_constraintRight_toLeftOf="@+id/textView24"
+                app:layout_constraintTop_toBottomOf="@+id/dayNoEditText" />
+
+            <Button
+                android:id="@+id/saveButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="16dp"
+                android:layout_marginTop="16dp"
+                android:background="@drawable/shape"
+                android:text="حفظ"
+                android:textColor="@color/colorWhite"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/linearLayout2" />
+
+            <TextView
+                android:id="@+id/textView36"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="16dp"
+                android:layout_marginRight="16dp"
+                android:layout_marginTop="16dp"
+                android:gravity="center"
+                android:text="التقرير اليومي لمتابعة خدمات الحجاج لمكتب الخدمة الميدانية لموسم حج عام 1438هـ"
+                android:textColor="@color/colorGold"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/textView37"
+                style="@style/title_text"
+                android:layout_marginEnd="8dp"
+                android:text="التاريخ: "
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/dayEditText" />
+
+            <Spinner
+                android:id="@+id/monthSpinner"
+                android:layout_width="wrap_content"
+                android:layout_height="40dp"
+                android:layout_marginRight="8dp"
+                android:layout_marginTop="8dp"
+                android:gravity="right"
+                android:overlapAnchor="false"
+                app:layout_constraintRight_toLeftOf="@+id/dayNoEditText"
+                app:layout_constraintTop_toBottomOf="@+id/dayEditText" />
+
+            <EditText
+                android:id="@+id/yearEditText"
+                style="@style/edit_text"
+                android:ems="3"
+                android:gravity="center"
+                android:hint="سنة"
+                android:inputType="number"
+                app:layout_constraintRight_toLeftOf="@+id/monthSpinner"
+                app:layout_constraintTop_toBottomOf="@+id/dayEditText" />
+
+            <LinearLayout
+                android:id="@+id/linearLayout2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="16dp"
+                android:orientation="vertical"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/visitNoEditText">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    android:orientation="horizontal"
+                    android:weightSum="2">
+
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="right|center"
+                        android:orientation="vertical">
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textColor="@color/colorGold"
+                            android:text="مستوى النظافة: " />
+                        <Spinner
+                            android:id="@+id/cleanSpinner"
+                            android:layout_width="wrap_content"
+                            android:layout_height="40dp"
+                            android:gravity="right"/>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="right|center"
+                        android:orientation="vertical">
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textColor="@color/colorGold"
+                            android:text="توفر المياه: " />
+
+                        <Spinner
+                            android:id="@+id/waterSpinner"
+                            android:layout_width="wrap_content"
+                            android:layout_height="42dp"
+                            android:gravity="right" />
+                    </LinearLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    android:layout_gravity="right">
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="right|center"
+                        android:orientation="vertical">
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textColor="@color/colorGold"
+                            android:text="تواجد مشرفى النظافة:  " />
+                        <Spinner
+                            android:id="@+id/cleanerFoundSpinner"
+                            android:layout_width="wrap_content"
+                            android:layout_height="40dp"
+                            android:gravity="right" />
+                    </LinearLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    android:orientation="horizontal"
+                    android:weightSum="2">
+
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="right|center"
+                        android:orientation="vertical">
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textColor="@color/colorGold"
+                            android:text="توفر المياه فى دورات المياه:  " />
+                        <Spinner
+                            android:id="@+id/waterAvailabilitySpinner"
+                            android:layout_width="wrap_content"
+                            android:layout_height="40dp"
+                            android:gravity="right"/>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="right|center"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textColor="@color/colorGold"
+                            android:text="نظافة دورات المياه: " />
+
+                        <Spinner
+                            android:id="@+id/toiletCleaningSpinner"
+                            android:layout_width="wrap_content"
+                            android:layout_height="40dp"
+                            android:gravity="right" />
+
+
+                    </LinearLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    android:orientation="horizontal"
+                    android:weightSum="2">
+
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="right|center"
+                        android:orientation="vertical">
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textColor="@color/colorGold"
+                            android:text="توزيع الثلج: " />
+                        <Spinner
+                            android:id="@+id/iceDistributionSpinner"
+                            android:layout_width="wrap_content"
+                            android:layout_height="40dp"
+                            android:gravity="right"/>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="right|center"
+                        android:orientation="vertical">
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textColor="@color/colorGold"
+                            android:text="وصول الثلج: " />
+                        <Spinner
+                            android:id="@+id/iceArrivedSpinner"
+                            android:layout_width="wrap_content"
+                            android:layout_height="40dp"
+                            android:gravity="right" />
+                    </LinearLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    android:orientation="horizontal"
+                    android:weightSum="2">
+
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="right|center"
+                        android:orientation="vertical">
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textColor="@color/colorGold"
+                            android:text="حالة ترامس المياه: " />
+                        <Spinner
+                            android:id="@+id/waterStatusSpinner"
+                            android:layout_width="wrap_content"
+                            android:layout_height="40dp"
+                            android:gravity="right"/>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="right|center"
+                        android:orientation="vertical">
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textColor="@color/colorGold"
+                            android:text="تعبئة ترامس المياه: " />
+                        <Spinner
+                            android:id="@+id/waterFillingSpinner"
+                            android:layout_width="wrap_content"
+                            android:layout_height="40dp"
+                            android:gravity="right" />
+                    </LinearLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    android:orientation="horizontal"
+                    android:weightSum="2">
+
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="right|center"
+                        android:orientation="vertical">
+
+
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textColor="@color/colorGold"
+                            android:text="تواجد عمال السلامة: " />
+                        <Spinner
+                            android:id="@+id/safetyWorkersSpinner"
+                            android:layout_width="wrap_content"
+                            android:layout_height="40dp"
+                            android:gravity="right"/>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="right|center"
+                        android:orientation="vertical">
+
+
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textColor="@color/colorGold"
+                            android:text="تواجد حراس الامن: " />
+                        <Spinner
+                            android:id="@+id/securitySpinner"
+                            android:layout_width="wrap_content"
+                            android:layout_height="40dp"
+                            android:gravity="right" />
+
+
+                    </LinearLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    android:orientation="horizontal"
+                    android:weightSum="2">
+
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="right|center"
+                        android:orientation="vertical">
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textColor="@color/colorGold"
+                            android:text="تواجد الحجاج فى مواقعهم: " />
+                        <Spinner
+                            android:id="@+id/hajLocationSpinner"
+                            android:layout_width="wrap_content"
+                            android:layout_height="40dp"
+                            android:gravity="right"/>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="right|center"
+                        android:orientation="vertical">
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textColor="@color/colorGold"
+                            android:text="حالة الحجاج: " />
+                        <Spinner
+                            android:id="@+id/hajStateSpinner"
+                            android:layout_width="wrap_content"
+                            android:layout_height="40dp"
+                            android:gravity="right" />
+                    </LinearLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    android:orientation="horizontal"
+                    android:weightSum="2">
+
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="right|center"
+                        android:orientation="vertical">
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textColor="@color/colorGold"
+                            android:text="توفر شيالات المرضى: " />
+                        <Spinner
+                            android:id="@+id/sickAvailableSpinner"
+                            android:layout_width="wrap_content"
+                            android:layout_height="40dp"
+                            android:gravity="right"/>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="right|center"
+                        android:orientation="vertical">
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textColor="@color/colorGold"
+                            android:text="توفر الكراسى المتحركة: " />
+                        <Spinner
+                            android:id="@+id/chairAvailableSpinner"
+                            android:layout_width="wrap_content"
+                            android:layout_height="40dp"
+                            android:gravity="right" />
+                    </LinearLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    android:orientation="horizontal"
+                    android:weightSum="2">
+
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="right|center"
+                        android:orientation="vertical">
+                        <TextView
+                            android:id="@+id/textView99"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textColor="@color/colorGold"
+                            android:text="التزام الحراس بالزى الرسمى: " />
+                        <Spinner
+                            android:id="@+id/securityFormalSpinner"
+                            android:layout_width="wrap_content"
+                            android:layout_height="40dp"
+                            android:gravity="right"/>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="right|center"
+                        android:orientation="vertical">
+                        <TextView
+                            android:id="@+id/textView38"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textColor="@color/colorGold"
+                            android:text="التزام العمال بالزى الرسمى: " />
+                        <Spinner
+                            android:id="@+id/workerFormalSpinner"
+                            android:layout_width="wrap_content"
+                            android:layout_height="40dp"
+                            android:gravity="right" />
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    android:orientation="horizontal"
+                    android:weightSum="2">
+
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="right|center"
+                        android:orientation="vertical">
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textColor="@color/colorGold"
+                            android:text="توفر السلامة: " />
+                        <Spinner
+                            android:id="@+id/safetySpinner"
+                            android:layout_width="wrap_content"
+                            android:layout_height="40dp"
+                            android:gravity="right"/>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="right|center"
+                        android:orientation="vertical">
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textColor="@color/colorGold"
+                            android:text="نظافة المطبخ: " />
+                        <Spinner
+                            android:id="@+id/kitchenCleaningSpinner"
+                            android:layout_width="wrap_content"
+                            android:layout_height="40dp"
+                            android:gravity="right" />
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    android:orientation="horizontal"
+                    android:weightSum="2">
+
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="right|center"
+                        android:orientation="vertical">
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textColor="@color/colorGold"
+                            android:text="توزيع الوجبات: " />
+                        <Spinner
+                            android:id="@+id/mealDistributionSpinner"
+                            android:layout_width="wrap_content"
+                            android:layout_height="40dp"
+                            android:gravity="right"/>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="right|center"
+                        android:orientation="vertical">
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textColor="@color/colorGold"
+                            android:text="وصول وجبات الحجاج: " />
+                        <Spinner
+                            android:id="@+id/hajMealArriveSpinner"
+                            android:layout_width="wrap_content"
+                            android:layout_height="40dp"
+                            android:gravity="right" />
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    android:orientation="horizontal"
+                    android:weightSum="2">
+
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="right|center"
+                        android:orientation="horizontal">
+
+                        <EditText
+                            android:id="@+id/distributionEndTimeET"
+                            android:layout_width="wrap_content"
+                            android:layout_height="40dp"
+                            android:gravity="center"
+                            android:backgroundTint="@color/colorGold"
+                            android:ems="4"/>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textColor="@color/colorGold"
+                            android:text="وقت انتهاء التوزيع: " />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="right|center"
+                        android:orientation="horizontal">
+
+                        <EditText
+                            android:id="@+id/distributionTimeET"
+                            android:layout_width="wrap_content"
+                            android:layout_height="40dp"
+                            android:gravity="center"
+                            android:backgroundTint="@color/colorGold"
+                            android:ems="4" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textColor="@color/colorGold"
+                            android:text="وقت التوزيع: " />
+
+
+                    </LinearLayout>
+
+                </LinearLayout>
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/textView39"
+                style="@style/title_text"
+                android:text="وقت الزيارة: "
+                app:layout_constraintRight_toLeftOf="@+id/visitNoEditText"
+                app:layout_constraintTop_toBottomOf="@+id/dayNoEditText" />
+
+            <EditText
+                android:id="@+id/visitTimeEditText"
+                style="@style/edit_text"
+                android:ems="4"
+                android:inputType="date"
+                android:gravity="center"
+                app:layout_constraintRight_toLeftOf="@+id/textView39"
+                app:layout_constraintTop_toBottomOf="@+id/dayNoEditText" />
+
+            <TextView
+                android:id="@+id/textView40"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:text="قطاع إسكان المشاعر بعرفات"
+                android:textStyle="bold"
+                android:textColor="@android:color/black"
+                android:textSize="15sp"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textView36" />
+
+
+        </android.support.constraint.ConstraintLayout>
+    </ScrollView>
+
+</android.support.v7.widget.CardView>

@@ -1,0 +1,998 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_margin="5dp"
+    android:focusableInTouchMode="true"
+    android:focusable="true">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+            xmlns:app="http://schemas.android.com/apk/res-auto"
+            xmlns:tools="http://schemas.android.com/tools"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            tools:context=".view.DailyDetection02_03Activity">
+
+            <TextView
+                android:id="@+id/textView36"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="16dp"
+                android:layout_marginRight="16dp"
+                android:layout_marginTop="16dp"
+                android:gravity="center"
+                android:text="بيان بالكشف المبدئي على السكن قبل وصول الحجاج"
+                android:textColor="@color/colorGold"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/textView23"
+                style="@style/title_text"
+                android:text="اليوم: "
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textView36" />
+
+            <EditText
+                android:id="@+id/dayEditText"
+                style="@style/edit_text"
+                android:ems="5"
+                android:gravity="right"
+                android:inputType="textPersonName"
+                app:layout_constraintRight_toLeftOf="@+id/textView23"
+                app:layout_constraintTop_toBottomOf="@+id/textView36" />
+
+            <TextView
+                android:id="@+id/textView37"
+                style="@style/title_text"
+                android:layout_marginEnd="8dp"
+                android:text="التاريخ: "
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/dayEditText" />
+
+            <EditText
+                android:id="@+id/dayNoEditText"
+                style="@style/edit_text"
+                android:layout_marginTop="8dp"
+                android:ems="3"
+                android:gravity="right"
+                android:hint="يوم "
+                android:inputType="number"
+                app:layout_constraintRight_toLeftOf="@+id/textView37"
+                app:layout_constraintTop_toBottomOf="@+id/dayEditText" />
+
+            <Spinner
+                android:id="@+id/monthSpinner"
+                android:layout_width="wrap_content"
+                android:layout_height="40dp"
+                android:layout_marginRight="8dp"
+                android:layout_marginTop="8dp"
+                android:gravity="right"
+                android:overlapAnchor="false"
+                app:layout_constraintRight_toLeftOf="@+id/dayNoEditText"
+                app:layout_constraintTop_toBottomOf="@+id/dayEditText" />
+
+            <EditText
+                android:id="@+id/yearEditText"
+                style="@style/edit_text"
+                android:ems="3"
+                android:gravity="right"
+                android:hint="سنة"
+                android:inputType="number"
+                app:layout_constraintRight_toLeftOf="@+id/monthSpinner"
+                app:layout_constraintTop_toBottomOf="@+id/dayEditText" />
+
+            <TextView
+                android:id="@+id/timeTextView37"
+                style="@style/title_text"
+                android:layout_marginEnd="8dp"
+                android:text="الوقت: "
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/dayNoEditText" />
+
+            <EditText
+                android:id="@+id/timeEditText"
+                style="@style/edit_text"
+                android:ems="5"
+                android:gravity="right"
+                android:inputType="date"
+                app:layout_constraintRight_toLeftOf="@+id/timeTextView37"
+                app:layout_constraintTop_toBottomOf="@+id/dayNoEditText" />
+
+            <LinearLayout
+                android:id="@+id/linearLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:paddingRight="16dp"
+                android:paddingBottom="8dp"
+                android:orientation="vertical"
+                android:background="@drawable/border"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/timeEditText">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    android:orientation="horizontal"
+                    android:weightSum="2">
+
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:gravity="right|center"
+                        android:orientation="horizontal">
+
+                        <EditText
+                            android:id="@+id/buildingNoET"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:ems="3"
+                            android:inputType="number"
+                            android:backgroundTint="@color/colorGold"
+                            android:gravity="right" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:text="رقم العماره: "
+                            android:textColor="@android:color/black" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="right|center"
+                        android:orientation="horizontal">
+
+                        <EditText
+                            android:id="@+id/buildingLocationEditText"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:backgroundTint="@color/colorGold"
+                            android:inputType="textMultiLine"
+                            android:ems="4" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="موقع العمارة: "
+                            android:textColor="@android:color/black" />
+
+                    </LinearLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    android:orientation="horizontal"
+                    android:weightSum="2">
+
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="right|center"
+                        android:orientation="horizontal">
+
+                        <EditText
+                            android:id="@+id/permitNoEditText"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:ems="3"
+                            android:inputType="number"
+                            android:backgroundTint="@color/colorGold"
+                            android:gravity="right" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="رقم التصريح: "
+                            android:textColor="@android:color/black" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="right|center"
+                        android:orientation="horizontal">
+
+                        <Spinner
+                            android:id="@+id/hajNationalityEditText"
+                            android:layout_width="wrap_content"
+                            android:layout_height="40dp"
+                            android:backgroundTint="@color/colorGold"
+                            android:gravity="right" />
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="جنسية الحجاج: "
+                            android:textColor="@android:color/black" />
+
+                    </LinearLayout>
+                </LinearLayout>
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/textView46"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="16dp"
+                android:layout_marginTop="24dp"
+                android:text="معلومات على الطبيعة"
+                android:textColor="@color/colorGold"
+                android:textSize="15sp"
+                android:textStyle="bold"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/linearLayout" />
+
+            <LinearLayout
+                android:id="@+id/linearLayout2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:paddingRight="16dp"
+                android:paddingBottom="8dp"
+                android:orientation="vertical"
+                android:background="@drawable/border"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textView46">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    android:orientation="horizontal"
+                    android:weightSum="2">
+
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="right|center"
+                        android:orientation="horizontal">
+
+                        <EditText
+                            android:id="@+id/distanceFromSacredET"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:backgroundTint="@color/colorGold"
+                            android:ems="5" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="البعد عن الحرم: "
+                            android:textColor="@android:color/black" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="right|center"
+                        android:orientation="horizontal">
+
+                        <EditText
+                            android:id="@+id/distanceFromMainStreetET"
+                            android:layout_width="wrap_content"
+                            android:layout_height="40dp"
+                            android:ems="5"
+                            android:backgroundTint="@color/colorGold"
+                            android:gravity="right" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="البعد عن الشارع العام: "
+                            android:textColor="@android:color/black" />
+
+                    </LinearLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    android:gravity="right">
+
+                    <Spinner
+                        android:id="@+id/busAvailabilitySpinner"
+                        android:layout_width="wrap_content"
+                        android:layout_height="40dp"
+                        android:backgroundTint="@color/colorGold"
+                        android:gravity="right" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="امكانية وصول الباصات ووايتات المياه: "
+                        android:textColor="@android:color/black" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    android:orientation="horizontal"
+                    android:weightSum="2">
+
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="right|center"
+                        android:orientation="horizontal">
+
+                        <EditText
+                            android:id="@+id/slopeTypeEditText"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:backgroundTint="@color/colorGold"
+                            android:ems="4" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="نوع المنحدر: "
+                            android:textColor="@android:color/black" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="right|center"
+                        android:orientation="horizontal">
+
+                        <Spinner
+                            android:id="@+id/slopeFoundSpinner"
+                            android:layout_width="wrap_content"
+                            android:layout_height="40dp"
+                            android:backgroundTint="@color/colorGold"
+                            android:gravity="right" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="يوجد منحدر: "
+                            android:textColor="@android:color/black" />
+
+                    </LinearLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    android:orientation="horizontal"
+                    android:weightSum="2">
+
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="right|center"
+                        android:orientation="horizontal">
+
+                        <Spinner
+                            android:id="@+id/permitCopySpinner"
+                            android:layout_width="wrap_content"
+                            android:layout_height="40dp"
+                            android:backgroundTint="@color/colorGold"
+                            android:gravity="right" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="وجود صورة تصريح: "
+                            android:textColor="@android:color/black" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="right|center"
+                        android:orientation="horizontal">
+
+                        <Spinner
+                            android:id="@+id/buildingTypeSpinner"
+                            android:layout_width="wrap_content"
+                            android:layout_height="40dp"
+                            android:backgroundTint="@color/colorGold"
+                            android:gravity="right" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="نوع المسكن: "
+                            android:textColor="@android:color/black" />
+
+                    </LinearLayout>
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    android:gravity="right">
+
+
+                        <EditText
+                            android:id="@+id/lightDamageToiletET"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:backgroundTint="@color/colorGold"
+                            android:inputType="textMultiLine"
+                            android:ems="10" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="الملاحظات: "
+                            android:textColor="@android:color/black" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    android:gravity="right">
+
+
+                        <EditText
+                            android:id="@+id/floorsRentedET"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:backgroundTint="@color/colorGold"
+                            android:inputType="number"
+                            android:ems="3" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="عدد الادوار المستأجرة للمسكن: "
+                            android:textColor="@android:color/black" />
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    android:orientation="horizontal"
+                    android:weightSum="2">
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="right|center"
+                        android:orientation="horizontal">
+
+                        <EditText
+                            android:id="@+id/kitchensNoET"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:backgroundTint="@color/colorGold"
+                            android:ems="3"
+                            android:inputType="number"/>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="عدد المطابخ: "
+                            android:textColor="@android:color/black" />
+                    </LinearLayout>
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="right|center"
+                        android:orientation="horizontal">
+
+                        <EditText
+                            android:id="@+id/roomsNoET"
+                            android:layout_width="wrap_content"
+                            android:layout_height="40dp"
+                            android:inputType="number"
+                            android:ems="3"
+                            android:backgroundTint="@color/colorGold"
+                            android:gravity="right" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="عدد الغرف: "
+                            android:textColor="@android:color/black" />
+
+                    </LinearLayout>
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    android:orientation="horizontal"
+                    android:weightSum="2">
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="right|center"
+                        android:orientation="horizontal">
+
+                        <EditText
+                            android:id="@+id/fansNoET"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:backgroundTint="@color/colorGold"
+                            android:ems="3"
+                            android:inputType="number"/>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="عدد المراوح: "
+                            android:textColor="@android:color/black" />
+                    </LinearLayout>
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="right|center"
+                        android:orientation="horizontal">
+
+                        <EditText
+                            android:id="@+id/toiletsNoET"
+                            android:layout_width="wrap_content"
+                            android:layout_height="40dp"
+                            android:inputType="number"
+                            android:ems="3"
+                            android:backgroundTint="@color/colorGold"
+                            android:gravity="right" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="عدد الحمامات: "
+                            android:textColor="@android:color/black" />
+
+                    </LinearLayout>
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    android:orientation="horizontal"
+                    android:weightSum="2">
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="right|center"
+                        android:orientation="horizontal">
+
+                        <Spinner
+                            android:id="@+id/ACStateSpinner"
+                            android:layout_width="wrap_content"
+                            android:layout_height="40dp"
+                            android:backgroundTint="@color/colorGold"
+                            android:gravity="right" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="حالة المكيفات : "
+                            android:textColor="@android:color/black" />
+                    </LinearLayout>
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="right|center"
+                        android:orientation="horizontal">
+
+                        <EditText
+                            android:id="@+id/refrigeratorsNoET"
+                            android:layout_width="wrap_content"
+                            android:layout_height="40dp"
+                            android:inputType="number"
+                            android:ems="3"
+                            android:backgroundTint="@color/colorGold"
+                            android:gravity="right" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="عدد البرادات: "
+                            android:textColor="@android:color/black" />
+
+                    </LinearLayout>
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    android:orientation="horizontal"
+                    android:weightSum="2">
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="right|center"
+                        android:orientation="horizontal">
+
+                        <EditText
+                            android:id="@+id/expirationDateEditText"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:ems="5"
+                            android:inputType="datetime"
+                            android:backgroundTint="@color/colorGold"
+                            android:gravity="right" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="تاريخ الصلاحية : "
+                            android:textColor="@android:color/black" />
+                    </LinearLayout>
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="right|center"
+                        android:orientation="horizontal">
+
+                        <EditText
+                            android:id="@+id/fireExtinguishersNoEditText"
+                            android:layout_width="wrap_content"
+                            android:layout_height="40dp"
+                            android:inputType="number"
+                            android:ems="3"
+                            android:backgroundTint="@color/colorGold"
+                            android:gravity="right" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="عدد طفايات الحريق: "
+                            android:textColor="@android:color/black" />
+
+                    </LinearLayout>
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    android:orientation="horizontal"
+                    android:weightSum="2">
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="right|center"
+                        android:orientation="horizontal">
+
+                        <EditText
+                            android:id="@+id/wastePailCountET"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:backgroundTint="@color/colorGold"
+                            android:ems="3"
+                            android:inputType="number"
+                            android:gravity="right"/>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="عدد سطول النفايات : "
+                            android:textColor="@android:color/black" />
+                    </LinearLayout>
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="right|center"
+                        android:orientation="horizontal">
+
+                        <EditText
+                            android:id="@+id/sandPailCountET"
+                            android:layout_width="wrap_content"
+                            android:layout_height="40dp"
+                            android:inputType="number"
+                            android:ems="3"
+                            android:backgroundTint="@color/colorGold"
+                            android:gravity="right" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="عدد سطول الرمل : "
+                            android:textColor="@android:color/black" />
+
+                    </LinearLayout>
+                </LinearLayout><LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    android:orientation="horizontal"
+                    android:weightSum="2">
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="right|center"
+                        android:orientation="horizontal">
+
+                        <EditText
+                            android:id="@+id/elevatorWidthET"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:backgroundTint="@color/colorGold"
+                            android:ems="3"
+                            android:inputType="number"
+                            android:gravity="right"/>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="سعة المصعد : "
+                            android:textColor="@android:color/black" />
+                    </LinearLayout>
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="right|center"
+                        android:orientation="horizontal">
+
+                        <Spinner
+                            android:id="@+id/elevatorFoundSpinner"
+                            android:layout_width="wrap_content"
+                            android:layout_height="40dp"
+                            android:backgroundTint="@color/colorGold"
+                            android:gravity="right" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="يوجد مصعد : "
+                            android:textColor="@android:color/black" />
+
+                    </LinearLayout>
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    android:gravity="right">
+
+
+                    <Spinner
+                        android:id="@+id/lightEnoughSpinner"
+                        android:layout_width="wrap_content"
+                        android:layout_height="40dp"
+                        android:backgroundTint="@color/colorGold"
+                        android:gravity="right" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="الاضائة كافية للغرف والممرات : "
+                        android:textColor="@android:color/black" />
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    android:gravity="right">
+
+
+                    <Spinner
+                        android:id="@+id/naturalLightEnoughSpinner"
+                        android:layout_width="wrap_content"
+                        android:layout_height="40dp"
+                        android:backgroundTint="@color/colorGold"
+                        android:gravity="right" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="الاضائة الطبيعية : "
+                        android:textColor="@android:color/black" />
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    android:gravity="right">
+
+
+                    <Spinner
+                        android:id="@+id/cleaningToolsEnoughSpinner"
+                        android:layout_width="wrap_content"
+                        android:layout_height="40dp"
+                        android:backgroundTint="@color/colorGold"
+                        android:gravity="right" />
+
+                    <Spinner
+                        android:id="@+id/cleaningToolsFoundSpinner"
+                        android:layout_width="wrap_content"
+                        android:layout_height="40dp"
+                        android:backgroundTint="@color/colorGold"
+                        android:gravity="right" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="وجود ادوات النظافة : "
+                        android:textColor="@android:color/black" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    android:gravity="right">
+
+
+                    <Spinner
+                        android:id="@+id/bedsTypesSpinner"
+                        android:layout_width="wrap_content"
+                        android:layout_height="40dp"
+                        android:backgroundTint="@color/colorGold"
+                        android:gravity="right" />
+
+                    <EditText
+                        android:id="@+id/bedsCountET"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:backgroundTint="@color/colorGold"
+                        android:ems="3"
+                        android:inputType="number"
+                        android:gravity="right"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="عدد الأسرة : "
+                        android:textColor="@android:color/black" />
+                </LinearLayout><LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    android:gravity="right">
+
+
+                    <Spinner
+                        android:id="@+id/mattressStateSpinner"
+                        android:layout_width="wrap_content"
+                        android:layout_height="40dp"
+                        android:backgroundTint="@color/colorGold"
+                        android:gravity="right" />
+
+                    <EditText
+                        android:id="@+id/mattressCountET"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:backgroundTint="@color/colorGold"
+                        android:ems="3"
+                        android:inputType="number"
+                        android:gravity="right"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="عدد المراتب : "
+                        android:textColor="@android:color/black" />
+                </LinearLayout><LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    android:gravity="right">
+
+
+                    <Spinner
+                        android:id="@+id/pillowsStateSpinner"
+                        android:layout_width="wrap_content"
+                        android:layout_height="40dp"
+                        android:backgroundTint="@color/colorGold"
+                        android:gravity="right" />
+
+                    <EditText
+                        android:id="@+id/pillowsCountET"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:backgroundTint="@color/colorGold"
+                        android:ems="3"
+                        android:inputType="number"
+                        android:gravity="right"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="عدد المخدات : "
+                        android:textColor="@android:color/black" />
+                </LinearLayout><LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    android:gravity="right">
+
+
+                    <Spinner
+                        android:id="@+id/blanketsStateSpinner"
+                        android:layout_width="wrap_content"
+                        android:layout_height="40dp"
+                        android:backgroundTint="@color/colorGold"
+                        android:gravity="right" />
+
+                    <EditText
+                        android:id="@+id/blanketsCountET"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:backgroundTint="@color/colorGold"
+                        android:ems="3"
+                        android:inputType="number"
+                        android:gravity="right"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="عدد اللحف والبطانيات : "
+                        android:textColor="@android:color/black" />
+                </LinearLayout>
+            </LinearLayout>
+            <CheckBox
+                android:id="@+id/failureFixingCheckBox"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="16dp"
+                android:backgroundTint="@color/colorGold"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/linearLayout2" />
+
+            <TextView
+                android:id="@+id/failureFixingTV"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="محضر معالجة قصور"
+                android:textColor="@android:color/black"
+                android:textSize="16dp"
+                app:layout_constraintBottom_toBottomOf="@+id/failureFixingCheckBox"
+                app:layout_constraintRight_toLeftOf="@id/failureFixingCheckBox"
+                app:layout_constraintTop_toTopOf="@+id/failureFixingCheckBox"
+                android:layout_marginRight="8dp"/>
+            <Button
+                android:id="@+id/save"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintLeft_toLeftOf="parent"
+                android:text="حفظ"
+                android:textColor="@android:color/white"
+                android:textSize="20sp"
+                android:background="@color/colorGold"
+                app:layout_constraintTop_toBottomOf="@+id/failureFixingCheckBox"/>
+        </android.support.constraint.ConstraintLayout>
+    </ScrollView>
+</android.support.v7.widget.CardView>

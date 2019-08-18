@@ -1,0 +1,633 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_margin="5dp"
+    tools:context=".view.FailureFixingReportActivity">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+            xmlns:app="http://schemas.android.com/apk/res-auto"
+            xmlns:tools="http://schemas.android.com/tools"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/textView23"
+                style="@style/title_text"
+                android:text="رقم البلاغ: "
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textView36" />
+
+            <EditText
+                android:id="@+id/reportNoEditText"
+                style="@style/edit_text"
+                android:ems="3"
+                android:gravity="center"
+                android:inputType="number"
+                app:layout_constraintRight_toLeftOf="@+id/textView23"
+                app:layout_constraintTop_toBottomOf="@+id/textView36" />
+
+            <TextView
+                android:id="@+id/textView37"
+                style="@style/title_text"
+                android:layout_marginRight="16dp"
+                android:text="التاريخ: "
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/reportNoEditText" />
+
+            <EditText
+                android:id="@+id/dayNoEditText"
+                style="@style/edit_text"
+                android:layout_marginTop="8dp"
+                android:ems="3"
+                android:gravity="center"
+                android:hint="يوم "
+                android:inputType="number"
+                app:layout_constraintRight_toLeftOf="@+id/textView37"
+                app:layout_constraintTop_toBottomOf="@+id/reportNoEditText" />
+
+            <Spinner
+                android:id="@+id/monthSpinner"
+                android:layout_width="wrap_content"
+                android:layout_height="40dp"
+                android:layout_marginRight="8dp"
+                android:layout_marginTop="8dp"
+                android:gravity="right"
+                android:overlapAnchor="false"
+                app:layout_constraintRight_toLeftOf="@+id/dayNoEditText"
+                app:layout_constraintTop_toBottomOf="@+id/reportNoEditText" />
+
+            <EditText
+                android:id="@+id/yearEditText"
+                style="@style/edit_text"
+                android:ems="3"
+                android:gravity="left"
+                android:hint="14هـ"
+                android:inputType="number"
+                app:layout_constraintRight_toLeftOf="@+id/monthSpinner"
+                app:layout_constraintTop_toBottomOf="@+id/reportNoEditText" />
+
+            <TextView
+                android:id="@+id/textView"
+                style="@style/title_text"
+                android:text="السيد/ "
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/yearEditText" />
+
+            <EditText
+                android:id="@+id/nameEditText"
+                style="@style/edit_text"
+                android:ems="10"
+                android:inputType="textPersonName"
+                android:gravity="right"
+                app:layout_constraintRight_toLeftOf="@+id/textView"
+                app:layout_constraintTop_toBottomOf="@+id/yearEditText" />
+
+            <TextView
+                android:id="@+id/textView24"
+                style="@style/title_text"
+                android:text="القائم بالخدمة فالعمارة رقم: "
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/nameEditText" />
+
+            <Spinner
+                android:id="@+id/buildingNoEditText"
+                android:layout_width="wrap_content"
+                android:layout_height="40dp"
+                android:layout_marginRight="8dp"
+                android:layout_marginTop="8dp"
+                android:gravity="right"
+                android:overlapAnchor="false"
+                app:layout_constraintRight_toLeftOf="@+id/textView24"
+                app:layout_constraintTop_toBottomOf="@+id/nameEditText" />
+
+            <TextView
+                android:id="@+id/textView25"
+                style="@style/title_text"
+                android:text="الواقعه بحى: "
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/buildingNoEditText" />
+
+            <EditText
+                android:id="@+id/neighborhoodEditText"
+                style="@style/edit_text"
+                android:ems="10"
+                android:inputType="textPersonName"
+                android:gravity="right"
+                app:layout_constraintRight_toLeftOf="@+id/textView25"
+                app:layout_constraintTop_toBottomOf="@+id/buildingNoEditText" />
+
+            <TextView
+                android:id="@+id/textView26"
+                style="@style/title_text"
+                android:text="شارع: "
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/neighborhoodEditText" />
+
+            <EditText
+                android:id="@+id/streetEditText"
+                style="@style/edit_text"
+                android:ems="10"
+                android:inputType="textPersonName"
+                android:gravity="right"
+                app:layout_constraintRight_toLeftOf="@+id/textView26"
+                app:layout_constraintTop_toBottomOf="@+id/neighborhoodEditText" />
+
+            <TextView
+                android:id="@+id/textView27"
+                style="@style/title_text"
+                android:text="جوار: "
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/streetEditText" />
+
+            <EditText
+                android:id="@+id/besideEditText"
+                style="@style/edit_text"
+                android:ems="10"
+                android:inputType="textPersonName"
+                android:gravity="right"
+                app:layout_constraintRight_toLeftOf="@+id/textView27"
+                app:layout_constraintTop_toBottomOf="@+id/streetEditText" />
+
+            <TextView
+                android:id="@+id/textView28"
+                style="@style/title_text"
+                android:layout_marginTop="16dp"
+                android:text="ذات التصريح رقم: "
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/besideEditText" />
+
+            <EditText
+                android:id="@+id/permitNoEditText"
+                style="@style/edit_text"
+                android:ems="5"
+                android:inputType="number"
+                android:gravity="center"
+                app:layout_constraintRight_toLeftOf="@+id/textView28"
+                app:layout_constraintTop_toBottomOf="@+id/besideEditText" />
+
+            <Button
+                android:id="@+id/saveButton"
+                android:layout_width="wrap_content"
+                android:layout_height="40dp"
+                android:layout_margin="8dp"
+                android:background="@drawable/shape"
+                android:text="حفظ"
+                android:textColor="@color/colorWhite"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/notesEditText" />
+
+            <TextView
+                android:id="@+id/textView29"
+                style="@style/title_text"
+                android:text="وتاريخ: "
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/permitNoEditText" />
+
+            <EditText
+                android:id="@+id/permitDayNoEditText"
+                style="@style/edit_text"
+                android:layout_marginTop="8dp"
+                android:ems="3"
+                android:gravity="center"
+                android:hint="يوم "
+                android:inputType="number"
+                app:layout_constraintRight_toLeftOf="@+id/textView37"
+                app:layout_constraintTop_toBottomOf="@+id/permitNoEditText" />
+
+            <Spinner
+                android:id="@+id/permitMonthSpinner"
+                android:layout_width="wrap_content"
+                android:layout_height="40dp"
+                android:layout_marginRight="8dp"
+                android:layout_marginTop="8dp"
+                android:gravity="right"
+                android:overlapAnchor="false"
+                app:layout_constraintRight_toLeftOf="@+id/permitDayNoEditText"
+                app:layout_constraintTop_toBottomOf="@+id/permitNoEditText" />
+
+            <EditText
+                android:id="@+id/permitYearEditText"
+                style="@style/edit_text"
+                android:ems="3"
+                android:gravity="left"
+                android:hint="14هـ"
+                android:inputType="number"
+                app:layout_constraintRight_toLeftOf="@+id/permitMonthSpinner"
+                app:layout_constraintTop_toBottomOf="@+id/permitNoEditText" />
+
+            <TextView
+                android:id="@+id/textView30"
+                style="@style/title_text"
+                android:text="بالعقد الموحد رقم: "
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/permitYearEditText" />
+
+            <EditText
+                android:id="@+id/contractNoEditText"
+                style="@style/edit_text"
+                android:ems="5"
+                android:inputType="number"
+                android:gravity="center"
+                app:layout_constraintRight_toLeftOf="@+id/textView30"
+                app:layout_constraintTop_toBottomOf="@+id/permitYearEditText" />
+
+            <TextView
+                android:id="@+id/textView31"
+                style="@style/title_text"
+                android:text="وتاريخ: "
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/contractNoEditText" />
+
+            <EditText
+                android:id="@+id/contractDayNoEditText"
+                style="@style/edit_text"
+                android:layout_marginTop="8dp"
+                android:ems="3"
+                android:gravity="center"
+                android:hint="يوم "
+                android:inputType="number"
+                app:layout_constraintRight_toLeftOf="@+id/textView37"
+                app:layout_constraintTop_toBottomOf="@+id/contractNoEditText" />
+
+            <Spinner
+                android:id="@+id/contractMonthSpinner"
+                android:layout_width="wrap_content"
+                android:layout_height="40dp"
+                android:layout_marginRight="8dp"
+                android:layout_marginTop="8dp"
+                android:gravity="right"
+                android:overlapAnchor="false"
+                app:layout_constraintRight_toLeftOf="@+id/contractDayNoEditText"
+                app:layout_constraintTop_toBottomOf="@+id/contractNoEditText" />
+
+            <EditText
+                android:id="@+id/contractYearEditText"
+                style="@style/edit_text"
+                android:ems="3"
+                android:gravity="left"
+                android:hint="14هـ"
+                android:inputType="number"
+                app:layout_constraintRight_toLeftOf="@+id/contractMonthSpinner"
+                app:layout_constraintTop_toBottomOf="@+id/contractNoEditText" />
+
+            <TextView
+                android:id="@+id/textView32"
+                style="@style/title_text"
+                android:text="نبلغ انه فى يوم: "
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/contractYearEditText" />
+
+            <EditText
+                android:id="@+id/reportDayEditText"
+                style="@style/edit_text"
+                android:ems="5"
+                android:inputType="textPersonName"
+                android:gravity="right"
+                app:layout_constraintRight_toLeftOf="@+id/textView32"
+                app:layout_constraintTop_toBottomOf="@+id/contractYearEditText" />
+
+            <TextView
+                android:id="@+id/textView33"
+                style="@style/title_text"
+                android:text="الموافق"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/reportDayEditText" />
+
+            <EditText
+                android:id="@+id/failureDayNoEditText"
+                style="@style/edit_text"
+                android:layout_marginTop="8dp"
+                android:ems="3"
+                android:gravity="center"
+                android:hint="يوم "
+                android:inputType="number"
+                app:layout_constraintRight_toLeftOf="@+id/textView37"
+                app:layout_constraintTop_toBottomOf="@+id/reportDayEditText" />
+
+            <Spinner
+                android:id="@+id/failureMonthSpinner"
+                android:layout_width="wrap_content"
+                android:layout_height="40dp"
+                android:layout_marginRight="8dp"
+                android:layout_marginTop="8dp"
+                android:gravity="right"
+                android:overlapAnchor="false"
+                app:layout_constraintRight_toLeftOf="@+id/failureDayNoEditText"
+                app:layout_constraintTop_toBottomOf="@+id/reportDayEditText" />
+
+            <EditText
+                android:id="@+id/failureYearEditText"
+                style="@style/edit_text"
+                android:ems="3"
+                android:gravity="left"
+                android:hint="14هـ"
+                android:inputType="number"
+                app:layout_constraintRight_toLeftOf="@+id/failureMonthSpinner"
+                app:layout_constraintTop_toBottomOf="@+id/reportDayEditText" />
+
+            <TextView
+                android:id="@+id/textView34"
+                style="@style/title_text"
+                android:text="الساعة: "
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/failureYearEditText" />
+
+            <EditText
+                android:id="@+id/failureDatEditText"
+                style="@style/edit_text"
+                android:ems="5"
+                android:inputType="date"
+                android:gravity="center"
+                app:layout_constraintRight_toLeftOf="@+id/textView34"
+                app:layout_constraintTop_toBottomOf="@+id/failureYearEditText" />
+
+            <TextView
+                android:id="@+id/textView35"
+                style="@style/title_text"
+                android:text="لوحظ قصور فى الخدمات التالية: "
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/failureDatEditText" />
+
+            <EditText
+                android:id="@+id/failureNotesEditText1"
+                style="@style/edit_text"
+                android:layout_height="wrap_content"
+                android:ems="15"
+                android:gravity="right"
+                android:hint="............................ -1"
+                android:inputType="textMultiLine"
+                android:maxLines="10"
+                android:minLines="2"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textView35" />
+
+            <EditText
+                android:id="@+id/failureNotesEditText2"
+                style="@style/edit_text"
+                android:layout_height="wrap_content"
+                android:ems="15"
+                android:gravity="right"
+                android:hint="............................ -2"
+                android:inputType="textMultiLine"
+                android:maxLines="10"
+                android:minLines="2"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/failureNotesEditText1" />
+
+            <EditText
+                android:id="@+id/failureNotesEditText3"
+                style="@style/edit_text"
+                android:layout_height="wrap_content"
+                android:ems="15"
+                android:gravity="right"
+                android:hint="............................ -3"
+                android:inputType="textMultiLine"
+                android:maxLines="10"
+                android:minLines="2"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/failureNotesEditText2" />
+
+            <TextView
+                android:id="@+id/textView36"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:text="محضر معالجة قصورالخدمة بمساكن الحجاج"
+                android:textColor="@color/colorGold"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/textView51"
+                style="@style/title_text"
+                android:text="المدة المحدده لانهاء القصور: "
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/failureNotesEditText3" />
+
+            <EditText
+                android:id="@+id/duration"
+                style="@style/edit_text"
+                android:ems="5"
+                android:gravity="right"
+                app:layout_constraintRight_toLeftOf="@+id/textView51"
+                app:layout_constraintTop_toBottomOf="@+id/failureNotesEditText3" />
+
+            <TextView
+                android:id="@+id/titleTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:text="التحليل والقياس"
+                android:textColor="@color/colorGold"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/duration" />
+
+            <CheckBox
+                android:id="@+id/check1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="16dp"
+                android:buttonTint="@color/colorGold"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/titleTextView" />
+
+            <TextView
+                android:layout_width="300dp"
+                android:layout_height="wrap_content"
+                android:layout_margin="8dp"
+                android:text="تم معالجة القصور في الخدمات المذكورة من قبل القائم بالخدمات في الزمن المحدد أعلاه ."
+                android:textColor="@android:color/black"
+                app:layout_constraintRight_toLeftOf="@+id/check1"
+                app:layout_constraintTop_toTopOf="@+id/check1" />
+
+            <CheckBox
+                android:id="@+id/check2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="16dp"
+                android:buttonTint="@color/colorGold"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/check1" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="8dp"
+                android:text="انتهت المدة المحددة ولازال الوضع كما هو عليه ."
+                android:textColor="@android:color/black"
+                app:layout_constraintRight_toLeftOf="@+id/check2"
+                app:layout_constraintTop_toTopOf="@+id/check2" />
+
+            <CheckBox
+                android:id="@+id/check3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="16dp"
+                android:buttonTint="@color/colorGold"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/check2" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="8dp"
+                android:text="تم معالجة القصور من قبل مجموعة الخدمة الميدانية"
+                android:textColor="@android:color/black"
+                app:layout_constraintRight_toLeftOf="@+id/check3"
+                app:layout_constraintTop_toTopOf="@+id/check3" />
+
+            <LinearLayout
+                android:id="@+id/linearLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="16dp"
+                android:orientation="vertical"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/check3">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    android:orientation="horizontal"
+                    android:weightSum="2">
+
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="right|center"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="يوم:  "
+                            android:textColor="@android:color/black" />
+
+                        <EditText
+                            android:id="@+id/fixingDayEditText"
+                            android:layout_width="wrap_content"
+                            android:layout_height="40dp"
+                            android:backgroundTint="@color/colorGold"
+                            android:ems="5"
+                            android:gravity="right"
+                            android:inputType="date" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="right|center"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="الساعة: "
+                            android:textColor="@android:color/black" />
+
+                        <EditText
+                            android:id="@+id/fixingTimeEditText"
+                            android:layout_width="wrap_content"
+                            android:layout_height="40dp"
+                            android:backgroundTint="@color/colorGold"
+                            android:ems="5"
+                            android:gravity="center"
+                            android:inputType="date" />
+
+
+                    </LinearLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="right">
+
+                    <EditText
+                        android:id="@+id/fixingYearEditText"
+                        style="@style/edit_text"
+                        android:ems="3"
+                        android:gravity="left"
+                        android:hint="14هـ"
+                        android:inputType="number" />
+
+                    <Spinner
+                        android:id="@+id/fixingMonthSpinner"
+                        android:layout_width="wrap_content"
+                        android:layout_height="40dp"
+                        android:layout_marginRight="8dp"
+                        android:layout_marginTop="8dp"
+                        android:gravity="right"
+                        android:overlapAnchor="false" />
+
+                    <EditText
+                        android:id="@+id/fixingDayNoEditText"
+                        style="@style/edit_text"
+                        android:ems="3"
+                        android:gravity="center"
+                        android:hint="يوم "
+                        android:inputType="number" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="تاريخ : "
+                        android:textColor="@android:color/black" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <CheckBox
+                android:id="@+id/check4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="16dp"
+                android:buttonTint="@color/colorGold"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/linearLayout" />
+
+            <TextView
+                android:id="@+id/notes"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="8dp"
+                android:text="ملاحظات اخرى"
+                android:textColor="@android:color/black"
+                app:layout_constraintRight_toLeftOf="@+id/check4"
+                app:layout_constraintTop_toTopOf="@+id/check4" />
+
+            <EditText
+                android:id="@+id/notesEditText"
+                style="@style/edit_text"
+                android:layout_height="wrap_content"
+                android:ems="15"
+                android:gravity="right"
+                android:inputType="textMultiLine"
+                android:maxLines="10"
+                android:minLines="1"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/notes" />
+
+
+        </android.support.constraint.ConstraintLayout>
+    </ScrollView>
+
+</android.support.v7.widget.CardView>

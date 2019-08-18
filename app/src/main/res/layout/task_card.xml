@@ -1,0 +1,389 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/task_card"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:paddingBottom="16dp"
+    android:paddingLeft="16dp"
+    android:paddingRight="16dp"
+    android:paddingTop="16dp"
+    android:layout_margin="20dp"
+    android:background="@drawable/text">
+
+    <android.support.constraint.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="8dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginRight="8dp"
+            android:layout_marginLeft="8dp"
+            android:layout_marginTop="8dp"
+            android:orientation="vertical"
+            android:weightSum="6"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+
+            <android.support.percent.PercentRelativeLayout
+                android:gravity="top"
+                android:layout_margin="10dp"
+                android:layout_height="0dp"
+                android:layout_width="match_parent"
+                android:layout_weight="1">
+
+                <TextView
+                    android:id="@+id/task_number"
+                    android:textColor="@color/colorPurple"
+                    android:textStyle="bold|italic"
+                    android:gravity="center"
+                    android:padding="2dp"
+                    android:background="@drawable/text"
+                    android:elevation="8dp"
+                    android:textAlignment="gravity"
+                    app:layout_marginTopPercent="10%"
+                    android:layout_alignParentRight="true"
+                    android:layout_below="@+id/task_no"
+                    android:text="1"
+                    app:layout_heightPercent="50%"
+                    app:layout_widthPercent="20%" />
+
+                <TextView
+                    android:layout_alignParentRight="true"
+                    android:text="رقم المهمة"
+                    android:textSize="12dp"
+                    android:textStyle="bold|italic"
+                    android:textColor="@color/colorDarkGold"
+                    android:gravity="right"
+                    android:id="@+id/task_no"
+                    android:textAlignment="gravity"
+                    app:layout_heightPercent="30%"
+                    app:layout_widthPercent="20%"/>
+
+                <TextView
+                    android:id="@+id/task_name"
+                    android:textColor="@color/colorPurple"
+                    android:textStyle="bold|italic"
+                    android:background="@drawable/text"
+                    android:gravity="center"
+                    android:text="task"
+                    app:layout_marginTopPercent="10%"
+                    app:layout_marginRightPercent="25%"
+                    android:elevation="8dp"
+                    android:textAlignment="gravity"
+                    android:layout_below="@+id/text2"
+                    app:layout_heightPercent="50%"
+                    app:layout_widthPercent="75%" />
+
+                <TextView
+                    android:textSize="12dp"
+                    android:textStyle="bold|italic"
+                    app:layout_marginRightPercent="25%"
+                    android:textColor="@color/colorDarkGold"
+                    android:text="اسم المهمة"
+                    android:id="@+id/text2"
+                    app:layout_heightPercent="30%"
+                    app:layout_widthPercent="75%" />
+
+            </android.support.percent.PercentRelativeLayout>
+
+
+            <android.support.percent.PercentRelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_margin="10dp"
+                android:layout_weight="1"
+                android:gravity="right"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/task_priority"
+                    android:textColor="@color/colorPurple"
+                    android:textStyle="bold|italic"
+                    android:background="@drawable/text"
+                    android:layout_alignParentRight="true"
+                    android:text="عاديه"
+                    app:layout_marginTopPercent="10%"
+                    android:elevation="8dp"
+                    android:gravity="center"
+                    android:textAlignment="gravity"
+                    android:layout_below="@+id/text3"
+                    app:layout_heightPercent="50%"
+                    app:layout_widthPercent="45%" />
+
+                <TextView
+                    android:textSize="12dp"
+                    android:textStyle="bold|italic"
+                    android:textColor="@color/colorDarkGold"
+                    android:layout_alignParentRight="true"
+                    android:text="اولوية المهمة"
+                    android:id="@+id/text3"
+                    app:layout_heightPercent="30%"
+                    app:layout_widthPercent="45%" />
+
+                <TextView
+                    android:id="@+id/task_status"
+                    android:text="معلقه"
+                    android:textColor="@color/colorPurple"
+                    android:textStyle="bold|italic"
+                    android:layout_alignParentLeft="true"
+                    android:background="@drawable/text"
+                    app:layout_marginTopPercent="10%"
+                    android:layout_below="@+id/status"
+                    android:gravity="center"
+                    android:elevation="8dp"
+                    android:padding="2dp"
+                    android:textAlignment="gravity"
+                    app:layout_heightPercent="50%"
+                    app:layout_widthPercent="45%" />
+
+                <TextView
+                    android:layout_alignParentLeft="true"
+                    android:textSize="12dp"
+                    android:textStyle="bold|italic"
+                    android:id="@+id/status"
+                    android:textColor="@color/colorDarkGold"
+                    android:text="حالة المهمة"
+                    app:layout_heightPercent="30%"
+                    app:layout_widthPercent="45%" />
+
+
+            </android.support.percent.PercentRelativeLayout>
+
+
+            <android.support.percent.PercentRelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_margin="10dp"
+                android:layout_weight="1"
+                android:gravity="right"
+                android:orientation="horizontal">
+
+
+                <TextView
+                    android:layout_alignParentRight="true"
+                    app:layout_marginTopPercent="10%"
+                    android:id="@+id/task_req"
+                    android:text="التنفيذ"
+                    android:background="@drawable/text"
+                    android:textColor="@color/colorPurple"
+                    android:textStyle="bold|italic"
+                    android:layout_below="@+id/reqtext"
+                    android:gravity="center"
+                    android:elevation="8dp"
+                    android:padding="2dp"
+                    android:textAlignment="gravity"
+                    app:layout_heightPercent="50%"
+                    app:layout_widthPercent="45%" />
+
+                <TextView
+                    android:layout_alignParentRight="true"
+                    android:textSize="12dp"
+                    android:textStyle="bold|italic"
+                    android:id="@+id/reqtext"
+                    android:textColor="@color/colorDarkGold"
+                    android:text="المطلوب من المهمة"
+                    app:layout_heightPercent="30%"
+                    app:layout_widthPercent="45%" />
+
+                <TextView
+                    android:id="@+id/task_type"
+                    android:text="قطاع الاسكان"
+                    android:textColor="@color/colorPurple"
+                    android:textStyle="bold|italic"
+                    android:background="@drawable/text"
+                    android:layout_alignParentLeft="true"
+                    app:layout_marginTopPercent="10%"
+                    android:layout_below="@+id/reqtext"
+                    android:gravity="center"
+                    android:elevation="8dp"
+                    android:padding="2dp"
+                    android:textAlignment="gravity"
+                    app:layout_heightPercent="50%"
+                    app:layout_widthPercent="45%" />
+
+                <TextView
+                    android:layout_alignParentLeft="true"
+                    android:textSize="12dp"
+                    android:textStyle="bold|italic"
+                    android:id="@+id/typetext"
+                    android:textColor="@color/colorDarkGold"
+                    android:text="فئة المهمة"
+                    app:layout_heightPercent="30%"
+                    app:layout_widthPercent="45%" />
+
+
+            </android.support.percent.PercentRelativeLayout>
+
+
+            <android.support.percent.PercentRelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_margin="10dp"
+                android:layout_weight="1"
+                android:gravity="right"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/task_start_date"
+                    android:text="1444/01/01"
+                    android:textColor="@color/colorPurple"
+                    android:background="@drawable/text"
+                    android:textStyle="bold|italic"
+                    android:layout_alignParentRight="true"
+                    app:layout_marginTopPercent="10%"
+                    android:layout_below="@+id/sdate"
+                    android:gravity="center"
+                    android:elevation="8dp"
+                    android:padding="2dp"
+                    android:textAlignment="gravity"
+                    app:layout_heightPercent="50%"
+                    app:layout_widthPercent="45%" />
+
+                <TextView
+                    android:layout_alignParentRight="true"
+                    android:textSize="12dp"
+                    android:textStyle="bold|italic"
+                    android:id="@+id/sdate"
+                    android:textColor="@color/colorDarkGold"
+                    android:text="تاريخ البداية"
+                    app:layout_heightPercent="30%"
+                    app:layout_widthPercent="45%" />
+
+
+                <TextView
+                    android:id="@+id/task_end_date"
+                    android:text="1444/10/01"
+                    android:textColor="@color/colorPurple"
+                    android:textStyle="bold|italic"
+                    android:layout_alignParentLeft="true"
+                    android:background="@drawable/text"
+                    app:layout_marginTopPercent="10%"
+                    android:layout_below="@+id/edate"
+                    android:gravity="center"
+                    android:elevation="8dp"
+                    android:padding="2dp"
+                    android:textAlignment="gravity"
+                    app:layout_heightPercent="50%"
+                    app:layout_widthPercent="45%" />
+
+                <TextView
+                    android:layout_alignParentLeft="true"
+                    android:textSize="12dp"
+                    android:textStyle="bold|italic"
+                    android:id="@+id/edate"
+                    android:textColor="@color/colorDarkGold"
+                    android:text="تاريخ النهاية"
+                    app:layout_heightPercent="30%"
+                    app:layout_widthPercent="45%" />
+
+
+            </android.support.percent.PercentRelativeLayout>
+
+
+            <android.support.percent.PercentRelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_margin="10dp"
+                android:layout_weight="1"
+                android:gravity="right"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/task_rperson"
+                    android:text="المسار البديل لتكنولوجيا المعلومات"
+                    android:textColor="@color/colorPurple"
+                    android:textStyle="bold|italic"
+                    android:background="@drawable/text"
+                    android:layout_alignParentRight="true"
+                    app:layout_marginTopPercent="10%"
+                    android:layout_below="@+id/rperson"
+                    android:gravity="center"
+                    android:elevation="8dp"
+                    android:padding="2dp"
+                    android:textAlignment="gravity"
+                    app:layout_heightPercent="50%"
+                    app:layout_widthPercent="100%" />
+
+                <TextView
+                    android:layout_alignParentRight="true"
+                    android:textSize="12dp"
+                    android:textStyle="bold|italic"
+                    android:id="@+id/rperson"
+                    android:textColor="@color/colorDarkGold"
+                    android:text="الشخص المسئول عن المهمة"
+                    app:layout_heightPercent="30%"
+                    app:layout_widthPercent="100%" />
+
+            </android.support.percent.PercentRelativeLayout>
+
+            <android.support.percent.PercentRelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_margin="10dp"
+                android:layout_weight=".65"
+                android:gravity="left"
+                android:orientation="horizontal"/>
+
+
+
+
+            <android.support.percent.PercentRelativeLayout
+                android:id="@+id/remove_gold"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight=".35"
+                android:background="@color/colorGold"
+                android:gravity="left"
+                android:orientation="horizontal">
+
+                <Button
+                    android:id="@+id/accept"
+                    android:layout_alignParentLeft="true"
+                    android:background="@mipmap/accept"
+                    app:layout_heightPercent="70%"
+                    app:layout_marginLeftPercent="10%"
+                    app:layout_marginTopPercent="10%"
+                    app:layout_widthPercent="5%" />
+
+                <Button
+                    android:id="@+id/reject"
+                    android:layout_alignParentLeft="true"
+                    android:background="@mipmap/remove"
+                    app:layout_heightPercent="80%"
+                    app:layout_marginLeftPercent="2%"
+                    app:layout_marginTopPercent="10%"
+                    app:layout_widthPercent="5%" />
+
+            </android.support.percent.PercentRelativeLayout>
+
+
+            <android.support.percent.PercentRelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_marginBottom="0dp"
+                android:layout_weight=".35"
+                android:gravity="left"
+                android:background="@color/colorGold"
+                android:orientation="horizontal"
+                android:id="@+id/edit_gold">
+
+                <Button
+                    android:layout_alignParentLeft="true"
+                    app:layout_marginLeftPercent="2%"
+                    android:background="@mipmap/pen"
+                    android:id="@+id/edit"
+                    app:layout_marginTopPercent="10%"
+                    app:layout_heightPercent="70%"
+                    app:layout_widthPercent="5%" />
+
+            </android.support.percent.PercentRelativeLayout>
+        </LinearLayout>
+    </android.support.constraint.ConstraintLayout>
+
+</android.support.v7.widget.CardView>

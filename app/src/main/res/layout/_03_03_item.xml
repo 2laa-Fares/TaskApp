@@ -1,0 +1,217 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="8dp"
+    android:background="#3983BE00"
+    app:cardBackgroundColor="@android:color/transparent"
+    app:cardElevation="0dp">
+
+    <TextView
+        android:id="@+id/_no"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="8dp"
+        android:layout_gravity="right"
+        android:gravity="center"
+        android:background="@drawable/circle_background"
+        android:textColor="@color/colorWhite"
+        android:textStyle="bold"
+        android:textSize="15dp"
+        android:elevation="10dp"/>
+
+
+    <android.support.constraint.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/text"
+        android:paddingLeft="8dp"
+        android:paddingTop="25dp"
+        android:paddingRight="8dp"
+        android:paddingBottom="8dp"
+        android:layout_marginTop="30dp">
+
+        <LinearLayout
+            android:id="@+id/linear1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:weightSum="8"
+            android:layout_marginTop="8dp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:textSize="12dp"
+                android:textStyle="bold|italic"
+                android:layout_weight="4"
+                android:textColor="@color/colorGold"
+                android:gravity="right"
+                android:text="تاريخ الزيارة:" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="4"
+                android:textSize="12dp"
+                android:textStyle="bold|italic"
+                android:textColor="@color/colorGold"
+                android:gravity="right"
+                android:text="وقت الزيارة:" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/linear2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:weightSum="8"
+            android:layout_marginTop="8dp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/linear1">
+
+            <TextView
+                android:id="@+id/_visit_date"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:textStyle="bold|italic"
+                android:layout_weight="4"
+                android:background="@drawable/text"
+                android:textColor="@color/colorPurple"
+                android:gravity="center"
+                android:elevation="8dp"
+                android:padding="2dp" />
+
+            <TextView
+                android:id="@+id/_visit_time"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="4"
+                android:layout_marginLeft="8dp"
+                android:layout_marginRight="4dp"
+                android:textStyle="bold|italic"
+                android:background="@drawable/text"
+                android:textColor="@color/colorPurple"
+                android:gravity="center"
+                android:elevation="8dp"
+                android:padding="2dp"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/linear3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:weightSum="8"
+            android:layout_marginTop="8dp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/linear2">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:textSize="12dp"
+                android:textStyle="bold|italic"
+                android:layout_weight="4"
+                android:textColor="@color/colorGold"
+                android:gravity="right"
+                android:text="تاريخ التصريح:" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="4"
+                android:textSize="12dp"
+                android:textStyle="bold|italic"
+                android:textColor="@color/colorGold"
+                android:gravity="right"
+                android:text="رقم التصريح:" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/linear4"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:weightSum="8"
+            android:layout_marginTop="8dp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/linear3">
+
+            <TextView
+                android:id="@+id/_permit_date"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:textStyle="bold|italic"
+                android:layout_weight="4"
+                android:background="@drawable/text"
+                android:textColor="@color/colorPurple"
+                android:gravity="center"
+                android:elevation="8dp"
+                android:padding="2dp" />
+
+            <TextView
+                android:id="@+id/_permit_no"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="4"
+                android:layout_marginRight="4dp"
+                android:layout_marginLeft="8dp"
+                android:textStyle="bold|italic"
+                android:background="@drawable/text"
+                android:textColor="@color/colorPurple"
+                android:gravity="center"
+                android:elevation="8dp"
+                android:padding="2dp"/>
+        </LinearLayout>
+
+        <android.support.constraint.ConstraintLayout
+            android:id="@+id/linear5"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/linear4">
+
+                <Button
+                    android:id="@+id/_edit"
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    android:textStyle="bold|italic"
+                    android:layout_gravity="center_vertical"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    android:background="@mipmap/pen"/>
+
+            <TextView
+                android:id="@+id/_period"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_weight="5.5"
+                android:textStyle="bold|italic"
+                android:textColor="@color/colorPurple"
+                android:gravity="right"
+                android:layout_marginRight="8dp"
+                android:minWidth="150dp"
+                android:elevation="8dp"
+                app:layout_constraintRight_toLeftOf="@id/text"/>
+
+
+            <TextView
+                android:id="@+id/text"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:textStyle="bold|italic"
+                android:layout_weight="2.5"
+                android:textColor="@color/colorGold"
+                android:gravity="right"
+                android:text="المدة المتاحة لمعالجته:"
+                app:layout_constraintRight_toRightOf="parent"/>
+        </android.support.constraint.ConstraintLayout>
+
+    </android.support.constraint.ConstraintLayout>
+
+</android.support.v7.widget.CardView>

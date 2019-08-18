@@ -1,0 +1,494 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="16dp"
+            android:layout_marginRight="16dp"
+            android:layout_marginTop="16dp"
+            android:gravity="center"
+            android:text="استمارة كشف مساكن الحجاج"
+            android:textColor="@color/colorGold"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/officeTextView"
+            style="@style/title_text"
+            android:text="رقم المكتب : "
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView" />
+
+        <EditText
+            android:id="@+id/officeNoEditText"
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:layout_marginRight="8dp"
+            android:layout_marginTop="16dp"
+            android:backgroundTint="@color/colorGold"
+            android:gravity="center"
+            android:hint="رقم المكتب"
+            android:inputType="number"
+            app:layout_constraintEnd_toStartOf="@+id/officeTextView"
+            app:layout_constraintTop_toBottomOf="@+id/textView" />
+
+        <TextView
+            android:id="@+id/organizerTextView"
+            style="@style/title_text"
+            android:text="رقم المنظم : "
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/officeTextView" />
+
+        <EditText
+            android:id="@+id/organizerNoEditText"
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:layout_marginRight="8dp"
+            android:layout_marginTop="16dp"
+            android:backgroundTint="@color/colorGold"
+            android:gravity="center"
+            android:hint="رقم المنظم"
+            android:inputType="number"
+            app:layout_constraintEnd_toStartOf="@+id/organizerTextView"
+            app:layout_constraintTop_toBottomOf="@+id/officeTextView"  />
+
+        <TextView
+            android:id="@+id/houseNoTextView"
+            style="@style/title_text"
+            android:text="رقم العمارة : "
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/organizerTextView" />
+
+        <EditText
+            android:id="@+id/houseNoEditText"
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:layout_marginRight="8dp"
+            android:layout_marginTop="16dp"
+            android:backgroundTint="@color/colorGold"
+            android:gravity="center"
+            android:hint="رقم العمارة"
+            android:inputType="number"
+            app:layout_constraintEnd_toStartOf="@+id/houseNoTextView"
+            app:layout_constraintTop_toBottomOf="@+id/organizerTextView" />
+
+
+        <TextView
+            android:id="@+id/textView1"
+            style="@style/title_text"
+            android:text="اسم المالك او المستأجر: "
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/houseNoEditText" />
+
+        <EditText
+            android:id="@+id/tenantOrOwnerEditText"
+            style="@style/edit_text"
+            android:ems="10"
+            android:inputType="textMultiLine"
+            android:gravity="right"
+            app:layout_constraintRight_toLeftOf="@+id/textView1"
+            app:layout_constraintTop_toBottomOf="@+id/houseNoEditText" />
+
+        <TextView
+            android:id="@+id/textView2"
+            style="@style/title_text"
+            android:text="اسم المبنى: "
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tenantOrOwnerEditText" />
+
+        <EditText
+            android:id="@+id/BuildingNameEditText"
+            style="@style/edit_text"
+            android:ems="10"
+            android:gravity="right"
+            android:inputType="textMultiLine"
+            app:layout_constraintRight_toLeftOf="@+id/textView2"
+            app:layout_constraintTop_toBottomOf="@+id/tenantOrOwnerEditText" />
+
+        <TextView
+            android:id="@+id/textView3"
+            style="@style/title_text"
+            android:text="اسم القائم بالخدمة: "
+            android:gravity="right"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/BuildingNameEditText" />
+
+        <EditText
+            android:id="@+id/serviceProviderEditText"
+            style="@style/edit_text"
+            android:ems="10"
+            android:inputType="textMultiLine"
+            app:layout_constraintRight_toLeftOf="@+id/textView3"
+            app:layout_constraintTop_toBottomOf="@+id/BuildingNameEditText" />
+
+        <LinearLayout
+            android:id="@+id/linearLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="16dp"
+            android:layout_marginRight="16dp"
+            android:layout_marginTop="16dp"
+            android:orientation="horizontal"
+            android:weightSum="3"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/serviceProviderEditText">
+
+            <EditText
+                android:id="@+id/phoneNoEditText"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:backgroundTint="@color/colorGold"
+                android:gravity="center"
+                android:hint="جوال"
+                android:inputType="phone" />
+
+            <EditText
+                android:id="@+id/faxEditText"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:backgroundTint="@color/colorGold"
+                android:gravity="center"
+                android:hint="فاكس"
+                android:inputType="phone" />
+
+            <EditText
+                android:id="@+id/telephoneEditText"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:backgroundTint="@color/colorGold"
+                android:gravity="center"
+                android:hint="هاتف"
+                android:inputType="phone" />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/textView54"
+            style="@style/title_text"
+            android:text="معلومات تصريح المبنى: "
+            android:textColor="@color/colorGold"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/linearLayout" />
+
+        <android.support.v7.widget.CardView
+            android:id="@+id/cardView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="16dp"
+            app:layout_constraintBottom_toTopOf="@+id/next"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/textView54">
+
+            <LinearLayout
+                android:id="@+id/parent"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="8dp"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="right"
+                    android:orientation="horizontal">
+
+                    <EditText
+                        android:id="@+id/permitNoEditText"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:backgroundTint="@color/colorGold"
+                        android:gravity="center"
+                        android:ems="5" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="تصريح الإسكان لهذا العام رقم : "
+                        android:textColor="@android:color/black" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="right">
+
+                    <EditText
+                        android:id="@+id/yearEditText"
+                        style="@style/edit_text"
+                        android:ems="3"
+                        android:gravity="left"
+                        android:hint="14هـ"
+                        android:inputType="number" />
+
+                    <Spinner
+                        android:id="@+id/monthSpinner"
+                        android:layout_width="wrap_content"
+                        android:layout_height="40dp"
+                        android:layout_marginRight="8dp"
+                        android:layout_marginTop="8dp"
+                        android:gravity="right"
+                        android:overlapAnchor="false" />
+
+                    <EditText
+                        android:id="@+id/dayNoEditText"
+                        style="@style/edit_text"
+                        android:ems="3"
+                        android:gravity="center"
+                        android:hint="يوم "
+                        android:inputType="number" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="تاريخ : "
+                        android:textColor="@android:color/black" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="right"
+                    android:orientation="horizontal">
+
+                    <EditText
+                        android:id="@+id/ownerNameEditText"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:backgroundTint="@color/colorGold"
+                        android:ems="10"
+                        android:gravity="right"
+                        android:inputType="textMultiLine" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="اسم المالك : "
+                        android:textColor="@android:color/black" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    android:orientation="horizontal"
+                    android:weightSum="3">
+
+
+                    <EditText
+                        android:id="@+id/housePhoneNoEditText"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:backgroundTint="@color/colorGold"
+                        android:ems="5"
+                        android:gravity="center"
+                        android:hint="رقم المنزل"
+                        android:inputType="phone" />
+
+
+                    <EditText
+                        android:id="@+id/mobileNoEditText"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:backgroundTint="@color/colorGold"
+                        android:ems="5"
+                        android:gravity="center"
+                        android:hint="رقم الجوال"
+                        android:inputType="phone" />
+
+                    <EditText
+                        android:id="@+id/telephoneNoEditText"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:backgroundTint="@color/colorGold"
+                        android:ems="5"
+                        android:gravity="center"
+                        android:hint="رقم الهاتف"
+                        android:inputType="phone" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    android:orientation="horizontal"
+                    android:weightSum="3">
+
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="right|center">
+
+                        <EditText
+                            android:id="@+id/buildingAddressEditText"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:backgroundTint="@color/colorGold"
+                            android:ems="10"
+                            android:gravity="right"
+                            android:inputType="textMultiLine" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="عنوان العمارة: "
+                            android:textColor="@android:color/black" />
+                    </LinearLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    android:orientation="horizontal"
+                    android:weightSum="2">
+
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="right|center"
+                        android:orientation="horizontal">
+
+                        <EditText
+                            android:id="@+id/roomsCountEditText"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:backgroundTint="@color/colorGold"
+                            android:inputType="number"
+                            android:gravity="center"
+                            android:ems="3" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="عدد الغرف: "
+                            android:textColor="@android:color/black" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="right|center"
+                        android:orientation="horizontal">
+
+                        <EditText
+                            android:id="@+id/floorsCountEditText"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:backgroundTint="@color/colorGold"
+                            android:inputType="number"
+                            android:gravity="center"
+                            android:ems="3" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="عدد الادوار: "
+                            android:textColor="@android:color/black" />
+
+                    </LinearLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    android:orientation="horizontal"
+                    android:weightSum="2">
+
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="right|center"
+                        android:orientation="horizontal">
+
+                        <EditText
+                            android:id="@+id/hajCountEditText"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:backgroundTint="@color/colorGold"
+                            android:inputType="number"
+                            android:gravity="center"
+                            android:ems="3" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="عدد الحجاج المصرح به: "
+                            android:textColor="@android:color/black" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="right|center"
+                        android:orientation="horizontal">
+
+                        <EditText
+                            android:id="@+id/kitchenCountEditText"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:backgroundTint="@color/colorGold"
+                            android:inputType="number"
+                            android:gravity="right"
+                            android:ems="3" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="عدد المطابخ: "
+                            android:textColor="@android:color/black" />
+
+                    </LinearLayout>
+                </LinearLayout>
+            </LinearLayout>
+
+
+        </android.support.v7.widget.CardView>
+
+        <Button
+            android:id="@+id/next"
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:paddingRight="8dp"
+            android:paddingLeft="8dp"
+            android:text="بيان بالكشف المبدئي على السكن قبل وصول الحجاج"
+            android:textColor="@color/colorWhite"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/cardView"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            android:layout_marginBottom="16dp"
+            android:background="@drawable/shape"/>
+
+    </android.support.constraint.ConstraintLayout>
+</ScrollView>

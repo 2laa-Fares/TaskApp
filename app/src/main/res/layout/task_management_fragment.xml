@@ -1,0 +1,211 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/cardView"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="10dp"
+    android:focusable="true"
+    android:focusableInTouchMode="true">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <android.support.constraint.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/textView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="16dp"
+                android:layout_marginTop="8dp"
+                android:text="@string/accept_or_reject_task"
+                android:textColor="@android:color/black"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <RadioGroup
+                android:id="@+id/radioGroup"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="16dp"
+                android:layout_marginTop="8dp"
+                android:gravity="right"
+                android:orientation="horizontal"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textView">
+
+                <RadioButton
+                    android:id="@+id/rejectRadioButton"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="60dp"
+                    android:button="@null"
+                    android:drawablePadding="10dp"
+                    android:drawableRight="@android:drawable/btn_radio"
+                    android:drawableTint="@color/colorGold"
+                    android:text="@string/reject" />
+
+                <RadioButton
+                    android:id="@+id/acceptRadioButton"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="60dp"
+                    android:button="@null"
+                    android:checked="true"
+                    android:drawablePadding="10dp"
+                    android:drawableRight="@android:drawable/btn_radio"
+                    android:drawableTint="@color/colorGold"
+                    android:text="@string/accept" />
+            </RadioGroup>
+
+            <EditText
+                android:id="@+id/RejectReasonEditText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="8dp"
+                android:layout_marginTop="8dp"
+                android:backgroundTint="@color/colorGold"
+                android:ems="10"
+                android:gravity="top|right"
+                android:hint="@string/RejectReason"
+                android:inputType="textMultiLine"
+                android:maxLines="10"
+                android:minLines="3"
+                android:visibility="gone"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/radioGroup" />
+
+            <TextView
+                android:id="@+id/textView3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="16dp"
+                android:layout_marginTop="36dp"
+                android:text="@string/task_state"
+                android:textColor="@android:color/black"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/RejectReasonEditText" />
+
+            <Spinner
+                android:id="@+id/taskStateSpinner"
+                android:layout_width="wrap_content"
+                android:layout_height="40dp"
+                android:layout_marginEnd="16dp"
+                android:layout_marginTop="8dp"
+                android:gravity="right"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textView3" />
+
+            <TextView
+                android:id="@+id/textView4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="80dp"
+                android:text="@string/state_description"
+                android:textColor="@android:color/black"
+                app:layout_constraintRight_toLeftOf="@+id/textView3"
+                app:layout_constraintTop_toTopOf="@+id/textView3" />
+
+            <EditText
+                android:id="@+id/stateDescriptionEditText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="60dp"
+                android:backgroundTint="@color/colorGold"
+                android:ems="10"
+                android:gravity="bottom|right"
+                android:inputType="textMultiLine"
+                android:maxLines="10"
+                android:minLines="2"
+                app:layout_constraintRight_toLeftOf="@+id/textView3"
+                app:layout_constraintTop_toBottomOf="@+id/textView4" />
+
+            <TextView
+                android:id="@+id/textView5"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="16dp"
+                android:layout_marginTop="36dp"
+                android:text="@string/opinion"
+                android:textColor="@android:color/black"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/taskStateSpinner" />
+
+            <Spinner
+                android:id="@+id/opinionSpinner"
+                android:layout_width="wrap_content"
+                android:layout_height="40dp"
+                android:layout_marginEnd="16dp"
+                android:layout_marginTop="8dp"
+                android:gravity="right"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textView5" />
+
+            <Button
+                android:id="@+id/openFileButton"
+                android:layout_width="wrap_content"
+                android:layout_height="30dp"
+                android:layout_marginEnd="32dp"
+                android:background="@drawable/shape"
+                android:elevation="3dp"
+                android:text="@string/open_file"
+                android:textColor="@android:color/white"
+                android:textSize="20sp"
+                app:layout_constraintEnd_toStartOf="@+id/opinionSpinner"
+                app:layout_constraintTop_toTopOf="@+id/opinionSpinner" />
+
+            <CheckBox
+                android:id="@+id/allowCheckBox"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="16dp"
+                android:layout_marginTop="8dp"
+                android:buttonTint="@color/colorGold"
+                android:elevation="3dp"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/opinionSpinner" />
+
+            <Button
+                android:id="@+id/saveButton"
+                android:layout_width="wrap_content"
+                android:layout_height="30dp"
+                android:layout_marginBottom="8dp"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="8dp"
+                android:background="@drawable/shape"
+                android:elevation="3dp"
+                android:text="@string/save"
+                android:textColor="@android:color/white"
+                android:textSize="20sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/checkedRecyclerView" />
+
+            <TextView
+                android:id="@+id/textView6"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:text="@string/allow"
+                android:textColor="@android:color/black"
+                app:layout_constraintRight_toLeftOf="@+id/allowCheckBox"
+                app:layout_constraintTop_toTopOf="@+id/allowCheckBox" />
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/checkedRecyclerView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="16dp"
+                android:layout_marginTop="16dp"
+                android:visibility="gone"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/allowCheckBox" />
+
+        </android.support.constraint.ConstraintLayout>
+    </ScrollView>
+</android.support.v7.widget.CardView>

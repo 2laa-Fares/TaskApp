@@ -1,0 +1,243 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center"
+    android:background="@android:color/transparent"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:clipToPadding="false"
+    android:padding="10dp">
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:id="@+id/linearLayout"
+        android:layout_width="240dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginBottom="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:background="@drawable/custom_border"
+        android:elevation="10dp"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <android.support.constraint.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <LinearLayout
+                android:id="@+id/up"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/colorPrimaryDark"
+                android:orientation="vertical"
+                android:padding="10dp"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <TextView
+                    android:id="@+id/lackNameTV"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="10dp"
+                    android:text="محاضر معالجة قصور الخدمة بمساكن الحجاج رقم للمسكن"
+                    android:gravity="right|center_horizontal"
+                    android:textColor="@android:color/white"
+                    android:lines="2"
+                    android:textSize="17dp" />
+            </LinearLayout>
+
+            <ScrollView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toBottomOf="@id/floatingCloseButton">
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintStart_toEndOf="@id/floatingCloseButton"
+                    app:layout_constraintTop_toBottomOf="@id/floatingCloseButton"
+                    android:layout_marginLeft="8dp"
+                    android:layout_marginRight="8dp"
+                    android:layoutDirection="rtl">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="8dp"
+                        android:layout_marginLeft="8dp"
+                        android:layout_marginTop="8dp">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:textStyle="bold|italic"
+                            android:textColor="@android:color/black"
+                            android:text="الساعة"/>
+                        <TextView
+                            android:id="@+id/timeEditText"
+                            android:layout_width="60dp"
+                            android:layout_height="match_parent"
+                            android:textColor="@color/colorPurple"
+                            android:layout_marginRight="8dp"
+                            android:textStyle="bold|italic"
+                            android:gravity="center"
+                            android:background="@drawable/text"
+                            android:text="7:00"/>
+
+                    </LinearLayout>
+
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="8dp"
+                        android:layout_marginTop="8dp"
+                        android:layout_marginLeft="8dp">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:textStyle="bold|italic"
+                            android:textColor="@android:color/black"
+                            android:text="اليوم"/>
+
+                        <EditText
+                            android:id="@+id/day"
+                            android:layout_width="100dp"
+                            android:layout_height="match_parent"
+                            android:textColor="@color/colorPurple"
+                            android:layout_marginRight="8dp"
+                            android:textStyle="bold|italic"
+                            android:gravity="center"
+                            android:backgroundTint="@color/colorGold"/>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="8dp"
+                        android:layout_marginLeft="8dp"
+                        android:layout_marginTop="8dp">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:text="التاريخ: "
+                            android:textStyle="bold|italic"
+                            android:textColor="@android:color/black" />
+
+                        <EditText
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:id="@+id/dayNoEditText"
+                            android:gravity="right"
+                            android:hint="يوم "
+                            android:backgroundTint="@color/colorGold"
+                            android:inputType="number" />
+
+                        <Spinner
+                            android:id="@+id/monthSpinner"
+                            android:layout_width="wrap_content"
+                            android:layout_height="40dp"
+                            android:layout_marginRight="8dp"
+                            android:backgroundTint="@color/colorGold"
+                            android:gravity="right"
+                            android:overlapAnchor="false" />
+
+                        <EditText
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:id="@+id/yearEditText"
+                            android:backgroundTint="@color/colorGold"
+                            android:gravity="right"
+                            android:hint="   سنة"
+                            android:inputType="number"/>
+                    </LinearLayout>
+
+
+                    <RadioGroup
+                        android:id="@+id/radioGroup"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="8dp">
+
+                        <RadioButton
+                            android:id="@+id/radio0"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:buttonTint="@color/colorPurple"
+                            android:text="تم معالجة القصور فى الخدمات المذكورة من نقبل القائم بالخدمات فى الزمن المحدد أعلاه"/>
+
+                        <RadioButton
+                            android:id="@+id/radio1"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="8dp"
+                            android:buttonTint="@color/colorPurple"
+                            android:text="انتهت المدة المحددة ولا زال الوضع كما هو عليه وسيتم معالجة القصور عن طريق مجموعة الخدمة الميدانية/ اللجنة المركزية" />
+
+                        <RadioButton
+                            android:id="@+id/radio2"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="8dp"
+                            android:buttonTint="@color/colorPurple"
+                            android:text="تم معالجة القصور من قبل مجموعة الخدمة الميدانية" />
+                    </RadioGroup>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="8dp"
+                        android:layout_marginTop="8dp"
+                        android:layout_marginLeft="8dp"
+                        android:layout_margin="8dp">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:textStyle="bold|italic"
+                            android:textColor="@android:color/black"
+                            android:text="آخرى"/>
+
+                        <EditText
+                            android:id="@+id/other"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:textColor="@color/colorPurple"
+                            android:layout_marginRight="8dp"
+                            android:textStyle="bold|italic"
+                            android:gravity="center"
+                            android:backgroundTint="@color/colorGold"/>
+
+                    </LinearLayout>
+
+                </LinearLayout>
+            </ScrollView>
+            <android.support.design.widget.FloatingActionButton
+                android:id="@+id/floatingCloseButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="8dp"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="50dp"
+                android:clickable="true"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:srcCompat="@mipmap/right"
+                app:backgroundTint="@color/colorPrimaryDark"/>
+        </android.support.constraint.ConstraintLayout>
+
+    </LinearLayout>
+
+</android.support.constraint.ConstraintLayout>

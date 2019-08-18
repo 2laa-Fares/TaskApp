@@ -1,0 +1,303 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".view.CampInventoryActivity"
+    android:focusableInTouchMode="true"
+    android:focusable="true">
+
+    <TextView
+        android:id="@+id/textView36"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="16dp"
+        android:layout_marginTop="16dp"
+        android:gravity="center"
+        android:text="جرد المخيم"
+        android:textColor="@color/colorGold"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textView23"
+        style="@style/title_text"
+        android:text="اليوم: "
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView36" />
+
+    <EditText
+        android:id="@+id/dayEditText"
+        style="@style/edit_text"
+        android:ems="5"
+        android:gravity="right"
+        android:inputType="textPersonName"
+        app:layout_constraintRight_toLeftOf="@+id/textView23"
+        app:layout_constraintTop_toBottomOf="@+id/textView36" />
+
+    <TextView
+        android:id="@+id/textView37"
+        style="@style/title_text"
+        android:text="التاريخ: "
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/dayEditText" />
+
+    <EditText
+        android:id="@+id/dayNoEditText"
+        style="@style/edit_text"
+        android:layout_marginTop="8dp"
+        android:ems="3"
+        android:gravity="center"
+        android:hint="يوم "
+        android:inputType="number"
+        app:layout_constraintRight_toLeftOf="@+id/textView37"
+        app:layout_constraintTop_toBottomOf="@+id/dayEditText" />
+
+    <Spinner
+        android:id="@+id/monthSpinner"
+        android:layout_width="wrap_content"
+        android:layout_height="40dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginTop="8dp"
+        android:gravity="right"
+        android:overlapAnchor="false"
+        app:layout_constraintRight_toLeftOf="@+id/dayNoEditText"
+        app:layout_constraintTop_toBottomOf="@+id/dayEditText" />
+
+    <EditText
+        android:id="@+id/yearEditText"
+        style="@style/edit_text"
+        android:ems="3"
+        android:gravity="right"
+        android:hint="سنة"
+        android:inputType="number"
+        app:layout_constraintRight_toLeftOf="@+id/monthSpinner"
+        app:layout_constraintTop_toBottomOf="@+id/dayEditText" />
+
+
+    <LinearLayout
+        android:id="@+id/linearLayout2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:paddingRight="16dp"
+        android:paddingBottom="8dp"
+        android:orientation="vertical"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/dayNoEditText">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp">
+
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="right|center"
+                android:orientation="horizontal">
+
+                <EditText
+                    android:id="@+id/cuttersNoET"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:backgroundTint="@color/colorGold"
+                    android:inputType="number"
+                    android:gravity="center"
+                    android:ems="3" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="عدد القواطع: "
+                    android:textColor="@android:color/black" />
+
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:orientation="horizontal"
+            android:weightSum="2">
+
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="right|center"
+                android:orientation="horizontal">
+
+                <EditText
+                    android:id="@+id/tentsNoET"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:inputType="number"
+                    android:backgroundTint="@color/colorGold"
+                    android:gravity="center"
+                    android:ems="3" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="عدد الخيام: "
+                    android:textColor="@android:color/black" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="right|center"
+                android:orientation="horizontal">
+
+                <EditText
+                    android:id="@+id/cleaningLevelET"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:backgroundTint="@color/colorGold"
+                    android:ems="4" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="مستوى النظافة: "
+                    android:textColor="@android:color/black" />
+
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:orientation="horizontal"
+            android:weightSum="2">
+
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="right|center"
+                android:orientation="horizontal">
+
+                <EditText
+                    android:id="@+id/toiletsNoET"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:backgroundTint="@color/colorGold"
+                    android:inputType="number"
+                    android:gravity="center"
+                    android:ems="3" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="عدد دورات المياه: "
+                    android:textColor="@android:color/black" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="right|center"
+                android:orientation="horizontal">
+
+                <EditText
+                    android:id="@+id/fireExtinguishersNoET"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:backgroundTint="@color/colorGold"
+                    android:inputType="number"
+                    android:gravity="center"
+                    android:ems="3" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="عدد طفايات الحريق: "
+                    android:textColor="@android:color/black" />
+
+            </LinearLayout>
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:orientation="horizontal"
+            android:weightSum="2">
+
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="right|center"
+                android:orientation="horizontal">
+
+                <EditText
+                    android:id="@+id/CampExitsNoET"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:backgroundTint="@color/colorGold"
+                    android:inputType="number"
+                    android:gravity="center"
+                    android:ems="3" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="عدد مخارج المخيم: "
+                    android:textColor="@android:color/black" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="right|center"
+                android:orientation="horizontal">
+
+                <EditText
+                    android:id="@+id/ACRemotesNoET"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:backgroundTint="@color/colorGold"
+                    android:gravity="center"
+                    android:inputType="number"
+                    android:ems="3" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="عدد ريموتات المكيفات: "
+                    android:textColor="@android:color/black" />
+
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/save"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:layout_margin="16dp"
+        android:background="@color/colorGold"
+        android:textSize="20sp"
+        android:text="حفظ"
+        android:textColor="@android:color/white"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout2" />
+</android.support.constraint.ConstraintLayout>

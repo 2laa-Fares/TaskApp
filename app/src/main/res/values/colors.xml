@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#3F51B5</color>
+    <color name="colorPrimaryDark">#303F9F</color>
+    <color name="colorAccent">#FF4081</color>
+    <color name="colorGold">#C9AE5D</color>
+    <color name="colorWhite">#ffff</color>
+    <color name="iron">#CBCDCD</color>
+    <color name="colorGray">#e9e9e9</color>
+    <color name="greyColor">#62647b</color>
+    <color name="colorDarkGold">#82725b</color>
+    <color name="colorMediumGold">#90784c</color>
+    <color name="colorPurple">#4a5b91</color>
+</resources>

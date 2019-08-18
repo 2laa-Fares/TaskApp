@@ -1,0 +1,203 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.CardView xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/cardView"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_marginTop="8dp"
+    android:layout_marginRight="8dp"
+    android:layout_marginLeft="8dp"
+    app:cardBackgroundColor="@android:color/transparent"
+    app:cardElevation="0dp">
+
+        <android.support.constraint.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layoutDirection="rtl"
+            android:orientation="vertical"
+            android:layout_marginBottom="8dp"
+            android:background="@drawable/text">
+
+            <LinearLayout
+                android:id="@+id/linearaction"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:weightSum="5"
+                android:orientation="horizontal"
+                android:layout_marginTop="8dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" >
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="right|fill_vertical"
+                    android:layout_marginLeft="4dp"
+                    android:layout_marginRight="8dp"
+                    android:layout_weight="1"
+                    android:gravity="right"
+                    android:text="الإجراء:"
+                    android:textColor="@color/colorGold"
+                    android:textSize="20dp"
+                    android:textStyle="bold|italic"/>
+
+                <TextView
+                    android:id="@+id/actionTextView"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="right"
+                    android:layout_marginLeft="8dp"
+                    android:layout_weight="4"
+                    android:gravity="right|center"
+                    android:textColor="@color/colorPurple"
+                    android:textAlignment="gravity"
+                    android:background="@drawable/text"
+                    android:elevation="8dp"
+                    android:padding="2dp"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/linearaction1"
+                android:layout_width="match_parent"
+                android:layout_height="25dp"
+                android:weightSum="5"
+                android:orientation="horizontal"
+                android:layout_marginTop="4dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/linearaction" >
+
+                <ImageView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginRight="4dp"
+                    android:layout_weight=".25"
+                    android:src="@mipmap/time"/>
+
+                <TextView
+                    android:id="@+id/actionTimeTextView"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="right"
+                    android:layout_marginLeft="4dp"
+                    android:layout_weight=".75"
+                    android:gravity="center"
+                    android:textColor="@color/colorGold"
+                    android:textAlignment="gravity"
+                    android:background="@drawable/text"
+                    android:elevation="8dp"
+                    android:padding="2dp"/>
+
+                <ImageView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginLeft="4dp"
+                    android:layout_weight=".25"
+                    android:src="@mipmap/calendar"/>
+
+                <TextView
+                    android:id="@+id/dateTextView"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="right"
+                    android:layout_marginLeft="8dp"
+                    android:layout_weight="3.75"
+                    android:gravity="right|center"
+                    android:textColor="@color/colorGold"
+                    android:textAlignment="gravity"
+                    android:background="@drawable/text"
+                    android:elevation="8dp"
+                    android:padding="2dp"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/linearaction2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:weightSum="5"
+                android:orientation="horizontal"
+                android:layout_marginTop="8dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/linearaction1">
+
+                <ImageView
+                    android:layout_width="0dp"
+                    android:layout_height="40dp"
+                    android:layout_gravity="center"
+                    android:layout_marginLeft="4dp"
+                    android:layout_marginRight="8dp"
+                    android:layout_weight=".5"
+                    android:src="@mipmap/note"/>
+
+                <TextView
+                    android:id="@+id/notesTextView"
+                    android:layout_width="0dp"
+                    android:layout_height="40dp"
+                    android:layout_gravity="right"
+                    android:layout_marginLeft="8dp"
+                    android:layout_marginRight="4dp"
+                    android:layout_weight="4.5"
+                    android:gravity="right|center"
+                    android:textColor="@color/colorGold"
+                    android:textAlignment="gravity"
+                    android:background="@drawable/text"
+                    android:lines="5"
+                    android:elevation="8dp"
+                    android:padding="2dp"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/linearaction3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginTop="4dp"
+                android:layout_marginBottom="4dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/linearaction2"
+                app:layout_constraintBottom_toBottomOf="parent"
+                android:layoutDirection="ltr">
+
+                <Button
+                    android:id="@+id/deleteImageView"
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    android:layout_marginLeft="8dp"
+                    android:background="@mipmap/delete24"/>
+
+                <Button
+                    android:id="@+id/editImageView"
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    android:layout_gravity="right"
+                    android:layout_marginLeft="8dp"
+                    android:background="@mipmap/edit24"/>
+
+                <CheckBox
+                    android:id="@+id/doneImageView"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:textColor="@color/colorGold"
+                    android:layout_gravity="right|fill_vertical"
+                    android:layout_marginLeft="4dp"
+                    android:layout_marginRight="4dp"
+                    android:backgroundTint="@color/colorPurple"
+                    android:text="منتهي"
+                    android:checked="true"
+                    android:clickable="false"
+                    android:layoutDirection="rtl"
+                    android:textSize="15dp"
+                    android:textStyle="bold|italic"/>
+
+            </LinearLayout>
+        </android.support.constraint.ConstraintLayout>
+</android.support.v7.widget.CardView>

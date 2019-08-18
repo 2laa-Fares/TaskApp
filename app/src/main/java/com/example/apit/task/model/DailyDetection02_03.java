@@ -1,0 +1,54 @@
+package com.example.apit.task.model;
+
+import java.util.Date;
+
+public class DailyDetection02_03 {
+    public int Report_ID;
+    public String Visit_Date;
+    public String Visit_Time;
+    public Integer PILGRIMS_Nationality;
+    public Integer House_ID;
+    public Boolean Guard_InPlace;
+    public Integer Guard_Nationality;
+    public Boolean Place_Clean;
+    public String Cleanng_Notes;
+    public Boolean lightening;
+    public String lightening_Notes;
+    public Boolean L_Damage_EnteryOfHouse;
+    public String L_Damage_Floor_Num;
+    public String L_Damage_Path_num;
+    public String L_Damage_Room_Num;
+    public String L_Damage_bathroom_Num;
+    public String L_Damage_Kitchen_Num;
+    public Boolean AirConditioning_Damage;
+    public String AirConditioning_DamageNote;
+    public String A_Damage_FloorNum;
+    public String A_Damage_Room_Num;
+    public Boolean Koldair_Damage;
+    public String Koldair_Damage_Notes;
+    public Boolean K_Damage_EntryOfHouse;
+    public String K_Damage_FloorNum;
+    public Boolean Entry_OfHouse;
+    public Boolean Zamzam_Water;
+    public Boolean WC_Clean;
+    public Boolean WC_Damage;
+    public String WC_Damage_Type;
+    public String WC_Damage_Palce;
+    public Boolean Kitchen_Clean;
+    public Boolean Kitchen_Damage;
+    public String Kitchen_DamageType;
+    public String Kitchen_Damage_Place;
+    public Boolean Total_Pilgrims_Typical;
+    public Integer Increasing_Num;
+    public Integer Task_ID;
+    public Integer Issue_ID;
+    public String SYSUSERKEY;
+    public Integer LAST_SYSUSERKEY;
+    public Date SYSDATE_TIME;
+    public Date LAST_SYSDATE_TIME;
+    public Boolean Report_Active;
+    public String Worker_Sign;
+    public Integer Report_Type;
+    public String Addation_Num;
+    public String Visit_Day;
+}

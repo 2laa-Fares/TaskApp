@@ -1,0 +1,223 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_margin="5dp"
+    android:focusable="true"
+    android:focusableInTouchMode="true">
+
+    <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+            xmlns:app="http://schemas.android.com/apk/res-auto"
+            xmlns:tools="http://schemas.android.com/tools"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            tools:context=".view.JamaratRegimentActivity">
+
+            <TextView
+                android:id="@+id/textView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="16dp"
+                android:layout_marginRight="16dp"
+                android:layout_marginTop="16dp"
+                android:gravity="center"
+                android:text="لجنة تفويج الجمرات"
+                android:textColor="@color/colorGold"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/textView1"
+                style="@style/title_text"
+                android:text="اليوم: "
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textView" />
+
+            <EditText
+                android:id="@+id/dayEditText"
+                style="@style/edit_text"
+                android:ems="5"
+                android:gravity="right"
+                android:inputType="textPersonName"
+                app:layout_constraintRight_toLeftOf="@+id/textView1"
+                app:layout_constraintTop_toBottomOf="@+id/textView" />
+
+            <TextView
+                android:id="@+id/textView2"
+                style="@style/title_text"
+                android:text="التاريخ: "
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/dayEditText" />
+
+            <EditText
+                android:id="@+id/dayNoEditText"
+                style="@style/edit_text"
+                android:layout_marginTop="8dp"
+                android:ems="3"
+                android:gravity="center"
+                android:hint="يوم "
+                android:inputType="number"
+                app:layout_constraintRight_toLeftOf="@+id/textView2"
+                app:layout_constraintTop_toBottomOf="@+id/dayEditText" />
+
+            <Spinner
+                android:id="@+id/monthSpinner"
+                android:layout_width="wrap_content"
+                android:layout_height="40dp"
+                android:layout_marginRight="8dp"
+                android:layout_marginTop="8dp"
+                android:backgroundTint="@color/colorGold"
+                android:gravity="right"
+                android:overlapAnchor="false"
+                app:layout_constraintRight_toLeftOf="@+id/dayNoEditText"
+                app:layout_constraintTop_toBottomOf="@+id/dayEditText" />
+
+            <EditText
+                android:id="@+id/yearEditText"
+                style="@style/edit_text"
+                android:ems="3"
+                android:gravity="center"
+                android:hint="سنة"
+                android:inputType="number"
+                app:layout_constraintRight_toLeftOf="@+id/monthSpinner"
+                app:layout_constraintTop_toBottomOf="@+id/dayEditText" />
+
+            <TextView
+                android:id="@+id/textView4"
+                style="@style/title_text"
+                android:text="الوقت:  "
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/dayNoEditText" />
+
+            <EditText
+                android:id="@+id/timeEditText"
+                style="@style/edit_text"
+                android:layout_marginTop="8dp"
+                android:ems="3"
+                android:gravity="center"
+                android:inputType="number"
+                app:layout_constraintRight_toLeftOf="@+id/textView4"
+                app:layout_constraintTop_toBottomOf="@+id/dayNoEditText" />
+
+            <TextView
+                android:id="@+id/textView7"
+                style="@style/title_text"
+                android:layout_marginTop="16dp"
+                android:text="اسم مسئول تفويج جسر الجمرات بالمكتب : "
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/timeEditText" />
+
+            <EditText
+                android:id="@+id/responsibleEditText"
+                style="@style/edit_text"
+                android:layout_marginRight="16dp"
+                android:ems="15"
+                android:gravity="right"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textView7" />
+
+            <TextView
+                android:id="@+id/textView99"
+                style="@style/title_text"
+                android:text="موقع المكتب بمشعر منى : "
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/responsibleEditText" />
+
+            <EditText
+                android:id="@+id/officeLocationEditText"
+                style="@style/edit_text"
+                android:layout_marginRight="16dp"
+                android:ems="15"
+                android:gravity="right"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textView99" />
+
+            <TextView
+                android:id="@+id/textView66"
+                style="@style/title_text"
+                android:text="رقم المربع: "
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/officeLocationEditText" />
+
+            <EditText
+                android:id="@+id/squareNoEditText"
+                style="@style/edit_text"
+                android:layout_marginTop="8dp"
+                android:ems="3"
+                android:gravity="center"
+                app:layout_constraintRight_toLeftOf="@+id/textView66"
+                app:layout_constraintTop_toBottomOf="@+id/officeLocationEditText" />
+
+            <TextView
+                android:id="@+id/textView64"
+                style="@style/title_text"
+                android:text="اسم مندوب المكتب المرافق مع الحجاج : "
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/squareNoEditText" />
+
+            <EditText
+                android:id="@+id/delegateEditText"
+                style="@style/edit_text"
+                android:layout_marginTop="8dp"
+                android:ems="15"
+                android:gravity="right"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textView64" />
+
+            <TextView
+                android:id="@+id/textView8"
+                style="@style/title_text"
+                android:text="عدد الحجاج رقما: "
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/delegateEditText" />
+
+            <EditText
+                android:id="@+id/hajNoEditText"
+                style="@style/edit_text"
+                android:layout_marginTop="8dp"
+                android:ems="3"
+                android:gravity="center"
+                app:layout_constraintRight_toLeftOf="@+id/textView8"
+                app:layout_constraintTop_toBottomOf="@+id/delegateEditText" />
+
+            <TextView
+                android:id="@+id/textView9"
+                style="@style/title_text"
+                android:text="عدد الحجاج كتابة: "
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/hajNoEditText" />
+
+            <EditText
+                android:id="@+id/hajNoWrittenEditText"
+                style="@style/edit_text"
+                android:layout_marginRight="16dp"
+                android:ems="15"
+                android:gravity="right"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textView9" />
+
+            <Button
+                android:id="@+id/save"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintLeft_toLeftOf="parent"
+                android:layout_margin="16dp"
+                android:background="@color/colorGold"
+                android:textColor="@android:color/white"
+                android:text="حفظ"
+                android:textSize="20sp"
+                app:layout_constraintTop_toBottomOf="@+id/hajNoWrittenEditText"/>
+
+        </android.support.constraint.ConstraintLayout>
+    </ScrollView>
+</android.support.v7.widget.CardView>
